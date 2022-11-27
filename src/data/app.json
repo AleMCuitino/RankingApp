@@ -1,7 +1,9 @@
 [
   {
+    "id": "1",
+    "device":"mobil",
     "app_id": "com.google.android.keep",
-    "app_name": "Google Keep - Notes and Lists",
+    "app_name": "Google Keep",
     "app_category": "Productivity",
     "app_developer": "Google LLC",
     "num_downloads": "1,000,000,000+",
@@ -10,7 +12,7 @@
     "price": 0,
     "price_currency": null,
     "is_paid": false,
-    "rating": 4,
+    "rating": "4,3",
     "photos": [
       "https://play-lh.googleusercontent.com/qW1OCeXIVPbBFRtmiUSYhzRfhwEV1CwJa5367zJjBwHktdp1l_tXG1zHWC5Xn4wJYQ",
       "https://play-lh.googleusercontent.com/Kd17zb0wMFSZ_yCf0CSUCZe5vVQOTVrnTEwz9kYDAKchgH4YiFo6Q5NlaCei92b-DnE",
@@ -69,12 +71,17 @@
     "max_android_api_level": 26
   },
   {
+    "id": "2",
+    "device":"mobil",
     "app_name": "Facebook",
+    "rating":"4,0",
     "app_icon": "https://play-lh.googleusercontent.com/ccWDU4A7fX1R24v-vvT480ySh26AYp97g1VrIB_FIdjRcuQB2JP2WdY7h_wVVAeSpg=w480-h960-rw"
   },
   {
+    "id": "3",
+    "device":"mobil",
     "app_id": "com.atomczak.notepat",
-    "app_name": "Notepad - simple notes",
+    "app_name": "Notepad",
     "app_category": "Productivity",
     "app_developer": "atomczak",
     "num_downloads": "10,000,000+",
@@ -83,7 +90,7 @@
     "price": 0,
     "price_currency": null,
     "is_paid": false,
-    "rating": 4,
+    "rating": "4,0",
     "photos": [
       "https://play-lh.googleusercontent.com/9C9Fr5PY2WKMobEqBTUxBTbqaxNIh_3MOMm3M5pBiLm2X9NgdUEHjiEZ54mHyCIH9Q",
       "https://play-lh.googleusercontent.com/IEVQBQPTbn9VsfRE2pl0FPPoS6vDOKW8wUjF_YAYgMbnjx0LXSnJCqb_2YkbVeBoGA",
@@ -139,6 +146,8 @@
     "max_android_api_level": 31
   },
   {
+    "id": "4",
+    "device":"web",
     "app_id": "com.samsung.android.app.notes",
     "app_name": "Samsung Notes",
     "app_category": "Productivity",
@@ -149,7 +158,7 @@
     "price": 0,
     "price_currency": null,
     "is_paid": false,
-    "rating": 4,
+    "rating": "4,0",
     "photos": [
       "https://play-lh.googleusercontent.com/iS0zbxT3xMGtFXJY5YvDnCDZ9iC4STCXyalP2n9FhD26pwfHC6N9uzcw40FT8-y_SyQ",
       "https://play-lh.googleusercontent.com/Yc-gSZh5E36oCij3IGqUUheNv_YeHU351mXO2jVz8C5mSQAnSnpB7Qr1Qm1FLKBM3lsA",
@@ -212,8 +221,10 @@
     "max_android_api_level": 28
   },
   {
+    "id": "5",
+    "device":"mobil",
     "app_id": "com.RanaSourav.android.notes",
-    "app_name": "Notes - Notepad and Reminders",
+    "app_name": "Notes",
     "app_category": "Productivity",
     "app_developer": "Sourav Rana",
     "num_downloads": "1,000,000+",
@@ -222,7 +233,7 @@
     "price": 0,
     "price_currency": null,
     "is_paid": false,
-    "rating": 4,
+    "rating": "4,0",
     "photos": [
       "https://play-lh.googleusercontent.com/BxTsmMkLSQmjYMdQH5YJrzWJ9ZpxH0yiOl4nBQQWCAakmkj-AOCmzNAPtRrmsCtfEuU",
       "https://play-lh.googleusercontent.com/J8Gv7lSBiJdcrS48FltbvENu2IaLJC-VZJOjqvpryFW5708f9LfApvnmI7N_Sd_UxA",
@@ -269,8 +280,10 @@
     "max_android_api_level": 30
   },
   {
+    "id": "6",
+    "device":"mobil",
     "app_id": "com.socialnmobile.dictapps.notepad.color.note",
-    "app_name": "ColorNote Notepad Notes",
+    "app_name": "Color Note",
     "app_category": "Productivity",
     "app_developer": "Notes",
     "num_downloads": "100,000,000+",
@@ -279,7 +292,7 @@
     "price": 0,
     "price_currency": null,
     "is_paid": false,
-    "rating": 4,
+    "rating": "4,0",
     "photos": [
       "https://play-lh.googleusercontent.com/Ee_BqNhnMRoNeiT10TOqar6lr7nLMK_C8cJq_Knuh972w9K94iot2hJ7UbjGEMrSPQ",
       "https://play-lh.googleusercontent.com/q5SbNkqGLJqLRQYrpY6yEjS3U1NgD6gfOBD0AyB__I05Xd7wDxTnOrNg7k1Wuv0I_Dw",
@@ -333,8 +346,10 @@
     "max_android_api_level": 23
   },
   {
+    "id": "7",
+    "device":"mobil",
     "app_id": "notepad.note.notas.notes.notizen",
-    "app_name": "BlackNote Notepad Notes",
+    "app_name": "BlackNote",
     "app_category": "Productivity",
     "app_developer": "Notas Notepad",
     "num_downloads": "5,000,000+",
@@ -343,7 +358,7 @@
     "price": 0,
     "price_currency": null,
     "is_paid": false,
-    "rating": 4,
+    "rating": "3,5",
     "photos": [
       "https://play-lh.googleusercontent.com/cVSGpH-eGbHXmuapakJShGuxt1CcuP7a18OxJKplXA8GFUGin3ZdPTe-1-x0XCePrw",
       "https://play-lh.googleusercontent.com/1gvcXW0KSBMijX3cM_W0g_H4ZPhNbHo4du7hMo3uk0a78QtqNWHWuo7oYV0BTODwVrw",
@@ -388,6 +403,8 @@
     "max_android_api_level": 31
   },
   {
+    "id": "8",
+    "device":"mobil",
     "app_id": "com.oneplus.note",
     "app_name": "OnePlus Notes",
     "app_category": "Tools",
@@ -398,7 +415,7 @@
     "price": 0,
     "price_currency": null,
     "is_paid": false,
-    "rating": 3,
+    "rating": "3,0",
     "photos": [
       "https://play-lh.googleusercontent.com/6t6ynxPmvRb9saJ5-rZU1SEW7KGU6dbxHVUEkjxSAY9M_qrteYeehSF8M_3XDyZ4z6g",
       "https://play-lh.googleusercontent.com/-I3Fq8dOkxkZvGSpMlUXQr34drpvPXitgVxnM0nkcLucNBYYO9ZCeMHaSu6pHIOfbg",
@@ -440,8 +457,10 @@
     "max_android_api_level": 29
   },
   {
+    "id": "9",
+    "device":"mobil",
     "app_id": "com.microsoft.office.onenote",
-    "app_name": "Microsoft OneNote: Save Notes",
+    "app_name": "Microsoft OneNote",
     "app_category": "Productivity",
     "app_developer": "Microsoft Corporation",
     "num_downloads": "500,000,000+",
@@ -450,7 +469,7 @@
     "price": 0,
     "price_currency": null,
     "is_paid": false,
-    "rating": 4,
+    "rating": "4,0",
     "photos": [
       "https://play-lh.googleusercontent.com/iCLkxjtMBLNH-qp_ICIeUeUFszvwkuTLUWWW2yRk4gsvGrEjsZrjerDHHMaUdmytDRA8",
       "https://play-lh.googleusercontent.com/3-MAlAwnKc3sA7WsMGO9BsyPrmZYjLEwQmlqZ34tJug0WoRW2JaDmscIKvuJySp_ow",
@@ -496,8 +515,10 @@
     "max_android_api_level": 31
   },
   {
+    "id": "10",
+    "device":"mobil",
     "app_id": "com.makenotetoself",
-    "app_name": "Note to Self - Private Notes",
+    "app_name": "Note to Self",
     "app_category": "Productivity",
     "app_developer": "tanujnotes",
     "num_downloads": "10,000+",
@@ -506,7 +527,7 @@
     "price": 0,
     "price_currency": null,
     "is_paid": false,
-    "rating": 4,
+    "rating": "3,8",
     "photos": [
       "https://play-lh.googleusercontent.com/9UrP55TUN-8EfrzcT_MGE0cmlZRlSiDMDqFznBXh_X7xNysr9YvEDgkpLiD1kRAl-A",
       "https://play-lh.googleusercontent.com/ivdl6EAbTBHbgHTueSUKo5Dtfj5a2XFNJBEGvNXHs0VdooX7lvDkzb0gfjWdhjLjvw",
@@ -549,8 +570,10 @@
     "max_android_api_level": 32
   },
   {
+    "id": "11",
+    "device":"mobil",
     "app_id": "com.eco.note",
-    "app_name": "Notes - Notebook, Notepad",
+    "app_name": "Notes",
     "app_category": "Productivity",
     "app_developer": "Eco Mobile",
     "num_downloads": "10,000,000+",
@@ -559,7 +582,7 @@
     "price": 0,
     "price_currency": null,
     "is_paid": false,
-    "rating": 4,
+    "rating": "3,8",
     "photos": [
       "https://play-lh.googleusercontent.com/nV09bYNIs6LMfAkZqtA1N1pDjs_5Z4RVVNp0u9Yl95v3QRYFE45YQpqDcBC40YGWxabN",
       "https://play-lh.googleusercontent.com/cKy4bCnXzSRtg0lejrZXtCROxbNwOpa31YvJpb2QEfgXtAE3ZQ8VK_3Qev_OKhSSStI",
@@ -620,6 +643,8 @@
     "max_android_api_level": 31
   },
   {
+    "id": "12",
+    "device":"Web",
     "app_id": "com.lautaro.qtnotes",
     "app_name": "Qt Notes",
     "app_category": "Productivity",
@@ -630,7 +655,7 @@
     "price": 0,
     "price_currency": null,
     "is_paid": false,
-    "rating": 4,
+    "rating": "4,0",
     "photos": [
       "https://play-lh.googleusercontent.com/_Esy-vnL927MEJaiI5NMNUvy5pPcaE8qF8iIbL_a0l3d5M4rGb_ZVZtNaGXa9kIwvcc",
       "https://play-lh.googleusercontent.com/41EmJOgxDpXPS1NSrq7qNpikra1p19_bGJBLdP5K28W8RK3tRmi_98S8t6QBdBJ7sw",
@@ -672,8 +697,10 @@
     "max_android_api_level": 30
   },
   {
+    "id": "13",
+    "device":"Web",
     "app_id": "com.evernote",
-    "app_name": "Evernote - Note Organizer",
+    "app_name": "Evernote",
     "app_category": "Productivity",
     "app_developer": "Evernote Corporation",
     "num_downloads": "100,000,000+",
@@ -682,7 +709,7 @@
     "price": 0,
     "price_currency": null,
     "is_paid": false,
-    "rating": 4,
+    "rating": "4,0",
     "photos": [
       "https://play-lh.googleusercontent.com/PYsYfF2DVpfdCi1g7--OX0TqPxSGIlpF0m_6PL8_UzR1ZLkuk6WBDHgdY_DebNZwgA",
       "https://play-lh.googleusercontent.com/BeaXkM5_BSXtMqoTawaVdTO6glElXswvquKoDAkki-ZRkJekZ7LEXEU-6ZjN90ZVoA",
@@ -729,8 +756,10 @@
     "max_android_api_level": 28
   },
   {
+    "id": "14",
+    "device":"Web",
     "app_id": "notizen.basic.notes.notas.note.notepad",
-    "app_name": "BasicNote - Notes, Notepad",
+    "app_name": "BasicNote",
     "app_category": "Productivity",
     "app_developer": "Notas Notepad",
     "num_downloads": "5,000,000+",
@@ -739,7 +768,7 @@
     "price": 0,
     "price_currency": null,
     "is_paid": false,
-    "rating": 4,
+    "rating": "4,0",
     "photos": [
       "https://play-lh.googleusercontent.com/tmUrxOZH_uMp4YFzDgJLl-NppdmV8FyeOCz7SyJfyiPlFiY2R57J6Phof_DmvQDe9yo",
       "https://play-lh.googleusercontent.com/-_6JVec-tMuh8wIuDdnDNZdSm2akdCPWxKznFxROLv45MKjZLrM_ETJNrQRRLElHwjk",
@@ -785,8 +814,10 @@
     "max_android_api_level": 31
   },
   {
+    "id": "15",
+    "device":"Mobil",
     "app_id": "notion.id",
-    "app_name": "Notion - notes, docs, tasks",
+    "app_name": "Notion",
     "app_category": "Productivity",
     "app_developer": "Notion Labs, Inc.",
     "num_downloads": "10,000,000+",
@@ -795,7 +826,7 @@
     "price": 0,
     "price_currency": null,
     "is_paid": false,
-    "rating": 3,
+    "rating": "3,0",
     "photos": [
       "https://play-lh.googleusercontent.com/r6MSeBTd1ewBCwpWNJXmrPsnYMmw93byd6G0Qd8VBbx-A_7oGO5WYHEZv_6cfmhQ6A",
       "https://play-lh.googleusercontent.com/ubwbVM7KRsMFgj2618g_vOmEObnHh1Vf27rG3EtEV9QqBlJrnz3O3bAmA3yPagxe248",
@@ -840,8 +871,10 @@
     "max_android_api_level": 33
   },
   {
+    "id": "16",
+    "device":"Mobil",
     "app_id": "easynotes.notes.notepad.notebook.privatenotes.note",
-    "app_name": "Easy Notes - Notebook, Notepad",
+    "app_name": "Easy Notes",
     "app_category": "Productivity",
     "app_developer": "QR Scanner & QR Code Generator & Radio & Notes",
     "num_downloads": "10,000,000+",
@@ -850,7 +883,7 @@
     "price": 0,
     "price_currency": null,
     "is_paid": false,
-    "rating": 4,
+    "rating": "4,0",
     "photos": [
       "https://play-lh.googleusercontent.com/3eC4SI0oDTUWYq3HnNRP9e6ZrHttPagj_HTLsBHViv-i8p8XH7NwMKlTYruNJ9ul4is",
       "https://play-lh.googleusercontent.com/uKJXYlAHNjkUy2OmENvbYpZ0nAY_6To8zP6ME1aAoHIoQkocpvKx9tBcpydQeG2pWA",
@@ -897,8 +930,10 @@
     "max_android_api_level": 31
   },
   {
+    "id": "17",
+    "device":"Mobil",
     "app_id": "notes.notepad.checklist.calendar.todolist.notebook",
-    "app_name": "Notepad, Notes, Easy Notebook",
+    "app_name": "Notepad",
     "app_category": "Productivity",
     "app_developer": "Simple Design Ltd.",
     "num_downloads": "100,000+",
@@ -907,7 +942,7 @@
     "price": 0,
     "price_currency": null,
     "is_paid": false,
-    "rating": 4,
+    "rating": "3,8",
     "photos": [
       "https://play-lh.googleusercontent.com/YvoALuRowuY5v9nFSG37f2_HdqDU2wGYz12w9O5kY5603UioIesydVA1rcFwFm_XeTI",
       "https://play-lh.googleusercontent.com/u4uudlNOjUk1B28SfG_hQbsFqYqTLdDdmYdKynUoJmDTgl71V6-44oOiExPxDs_Y7R7P",
@@ -954,8 +989,10 @@
     "max_android_api_level": 31
   },
   {
+    "id": "18",
+    "device":"Mobil",
     "app_id": "com.zoho.notebook",
-    "app_name": "Notebook - Notes,To-do,Journal",
+    "app_name": "Notebook",
     "app_category": "Productivity",
     "app_developer": "Zoho Corporation",
     "num_downloads": "1,000,000+",
@@ -964,7 +1001,7 @@
     "price": 0,
     "price_currency": null,
     "is_paid": false,
-    "rating": 4,
+    "rating": "3,8",
     "photos": [
       "https://play-lh.googleusercontent.com/bdLDMq1kCYEMnCujASnavc8S6jmup3qj-bZ0EpuqqKo2NyhriweoEgiTS6Q0R8smLoBk",
       "https://play-lh.googleusercontent.com/BS7HsY1OTJj1kAFNyjepVvKh1R_O5zOAgWFAcy3w1U5-gKuG0JH1Xm6QpOixffh_1A",
@@ -1009,8 +1046,10 @@
     "max_android_api_level": 33
   },
   {
+    "id": "19",
+    "device":"Mobil",
     "app_id": "com.aisense.otter",
-    "app_name": "Otter: Transcribe Meeting Note",
+    "app_name": "Otter",
     "app_category": "Productivity",
     "app_developer": "Otter.ai",
     "num_downloads": "1,000,000+",
@@ -1019,7 +1058,7 @@
     "price": 0,
     "price_currency": null,
     "is_paid": false,
-    "rating": 4,
+    "rating": "3,8",
     "photos": [
       "https://play-lh.googleusercontent.com/QvEmaisS3fzYGt3SFkiULY_yYYSpJh1f7iOLRYe00Ko4WdKd229UH_eUmLaz9uTa9Ek",
       "https://play-lh.googleusercontent.com/d_hyTwxdTQJrwzIkkmAskOv9KAVmf8lPEji0HL81ihz1-sqr8_BiBulUJctOBi44MLY",
@@ -1066,8 +1105,10 @@
     "max_android_api_level": 33
   },
   {
+    "id": "20",
+    "device":"Mobil",
     "app_id": "com.ztnstudio.notepad",
-    "app_name": "Notepad – Notes and Checklists",
+    "app_name": "Notepad",
     "app_category": "Tools",
     "app_developer": "Sappalodapps Development",
     "num_downloads": "10,000,000+",
@@ -1076,7 +1117,7 @@
     "price": 0,
     "price_currency": null,
     "is_paid": false,
-    "rating": 4,
+    "rating": "3,8",
     "photos": [
       "https://play-lh.googleusercontent.com/o1O0iFkU8ngCLpQgmTjEhTHwgRSBdpb6hqL6pMg8IeAcVV9Y5KHjAfj1SBT1fb0uY0q0",
       "https://play-lh.googleusercontent.com/Wqr3GPZh9UkNY3YG09SjfzM7e3pk0u2U0mGesG8eJYCkBLVXapdqp3yUOvHLJD6MoA",
@@ -1123,8 +1164,10 @@
     "max_android_api_level": 31
   },
   {
+    "id": "21",
+    "device":"Mobil",
     "app_id": "com.dvdb.bergnotes",
-    "app_name": "D Notes - Notepad, Checklist a",
+    "app_name": "D Notes",
     "app_category": "Productivity",
     "app_developer": "Damian van den Berg",
     "num_downloads": "500,000+",
@@ -1133,7 +1176,7 @@
     "price": 0,
     "price_currency": null,
     "is_paid": false,
-    "rating": 4,
+    "rating": "3,8",
     "photos": [
       "https://play-lh.googleusercontent.com/8SOs8HQO7soXN8A1RO5jnEB7U6YMI-bZFVVdtb3Xhn-AaZwhQVbBLf8fcYa-sgXQXatD",
       "https://play-lh.googleusercontent.com/R8IogjB9VrDYnbnX89rulEIMYMJtnWRnrvHXhCBMy4tgkuplDNB9u2XWJDxPtIeokA",
@@ -1194,8 +1237,10 @@
     "max_android_api_level": 29
   },
   {
+    "id": "22",
+    "device":"Mobil",
     "app_id": "com.yocto.wenote",
-    "app_name": "WeNote: Notes Notebook Notepad",
+    "app_name": "WeNote",
     "app_category": "Productivity",
     "app_developer": "Yocto Enterprise",
     "num_downloads": "1,000,000+",
@@ -1204,7 +1249,7 @@
     "price": 0,
     "price_currency": null,
     "is_paid": false,
-    "rating": 4,
+    "rating": "4,0",
     "photos": [
       "https://play-lh.googleusercontent.com/OCHl54fu1xIoEPmDUFjhnR80p-tvjjye4nnfWwymKiH0j4INIOUxVV7rMgOHYavgxF0",
       "https://play-lh.googleusercontent.com/hsawJwBAruIXCPWqteP5BLq1opBPIZkW79RuEfTVjfhI97eS9cQQqVlW5v83yLUM1Q",
@@ -1251,8 +1296,10 @@
     "max_android_api_level": 31
   },
   {
+    "id": "23",
+    "device":"Mobil",
     "app_id": "com.getupnote.android",
-    "app_name": "UpNote - notes, diary, journal",
+    "app_name": "UpNote",
     "app_category": "Productivity",
     "app_developer": "UpNote Co Ltd",
     "num_downloads": "50,000+",
@@ -1261,7 +1308,7 @@
     "price": 0,
     "price_currency": null,
     "is_paid": false,
-    "rating": 4,
+    "rating": "4,0",
     "photos": [
       "https://play-lh.googleusercontent.com/xFWsfJuTCOe_oqZt8OxS6d_-dkwDiD5hjXtviogBdBObHpQge_QKZuSW893UTQpWHJc",
       "https://play-lh.googleusercontent.com/RpZZqW50cEPXjtvIrBFGyOArv1JJ5REDmiML0KJednSLEjdDZDOaAENKT8XrYB6rFTMI",
@@ -1320,8 +1367,10 @@
     "max_android_api_level": 33
   },
   {
+    "id": "24",
+    "device":"Mobil",
     "app_id": "com.somcloud.somnote",
-    "app_name": "SomNote - Beautiful note app",
+    "app_name": "SomNote",
     "app_category": "Productivity",
     "app_developer": "퀀텀비트",
     "num_downloads": "1,000,000+",
@@ -1330,7 +1379,7 @@
     "price": 0,
     "price_currency": null,
     "is_paid": false,
-    "rating": 4,
+    "rating": "3,5",
     "photos": [
       "https://play-lh.googleusercontent.com/smwXrS1IWI3A2oPaIDbKrqfzNFfYuzRG8InSbiMi-MrPLScGjuXp7JEyv7pq94B9NA",
       "https://play-lh.googleusercontent.com/ruF3Tspe7h6BUICauQDVrRhTZwYGQz0BrFG2mFFzoUZfS384BxiyVnVv3eKSojU2hEQ",
@@ -1384,8 +1433,10 @@
     "max_android_api_level": 31
   },
   {
+    "id": "25",
+    "device":"Mobil",
     "app_id": "com.steadfastinnovation.android.projectpapyrus",
-    "app_name": "Squid: Take Notes, Markup PDFs",
+    "app_name": "Squid",
     "app_category": "Productivity",
     "app_developer": "Steadfast Innovation, LLC",
     "num_downloads": "5,000,000+",
@@ -1394,7 +1445,7 @@
     "price": 0,
     "price_currency": null,
     "is_paid": false,
-    "rating": 4,
+    "rating": "4,0",
     "photos": [
       "https://play-lh.googleusercontent.com/g0A_axqUed-PXFMRxI2qGX4wM3nP8fLkxS57wFPEyVus4iMCaa5wQOZtmLjIFStmGYYN",
       "https://play-lh.googleusercontent.com/BWyZ67Z4X6p-w_BeHohpv4HYCDj2aB9ua2WKkm8s5UOlo5A4VRR44skgXG9YF8iaRQ",
@@ -1457,8 +1508,10 @@
     "max_android_api_level": 30
   },
   {
+    "id": "26",
+    "device":"Mobil",
     "app_id": "com.flexcil.flexcilnote",
-    "app_name": "Flexcil Notes & PDF Reader",
+    "app_name": "Flexcil Notes",
     "app_category": "Productivity",
     "app_developer": "Flexcil Inc.",
     "num_downloads": "500,000+",
@@ -1467,7 +1520,7 @@
     "price": 0,
     "price_currency": null,
     "is_paid": false,
-    "rating": 3,
+    "rating": "3,0",
     "photos": [
       "https://play-lh.googleusercontent.com/6H6YUDc93LSPQp5f2MuqE2LYhqHij0cQTlKEazDGh8O1CT-wG-KBHb19Qxxu8u1SbSdM",
       "https://play-lh.googleusercontent.com/fMdtIIJzQ9LEEiOQBJkIwRMpDJcqk77E6g_0WdyUVsqZbsQB0iEJR46uoQQSD3OHXA",
@@ -1530,8 +1583,10 @@
     "max_android_api_level": 31
   },
   {
+    "id": "27",
+    "device":"Mobil",
     "app_id": "com.q61.note",
-    "app_name": "Wondr Note - Cute Notes, Lists",
+    "app_name": "Wondr Note",
     "app_category": "Productivity",
     "app_developer": "Mighty Bear Vibes",
     "num_downloads": "100,000+",
@@ -1540,7 +1595,7 @@
     "price": 0,
     "price_currency": null,
     "is_paid": false,
-    "rating": 4,
+    "rating": "4,0",
     "photos": [
       "https://play-lh.googleusercontent.com/IxPLHHckN6zUp9jYegQD_PD9Hqk-QkgMNRHPYxqqZf-_8Ds3gavAnaS3URpRluFOzdE",
       "https://play-lh.googleusercontent.com/A99WSYWc42NT2U3VdcIe0FodUSw2YNE0yyU6iqvV28-fMUUJ57V67wkDiNUEOMWfjQ",
@@ -1587,8 +1642,10 @@
     "max_android_api_level": 31
   },
   {
+    "id": "28",
+    "device":"Mobil",
     "app_id": "com.albul.timeplanner",
-    "app_name": "Time Planner: Schedule & Tasks",
+    "app_name": "Time Planner",
     "app_category": "Productivity",
     "app_developer": "Oleksandr Albul",
     "num_downloads": "5,000,000+",
@@ -1597,7 +1654,7 @@
     "price": 0,
     "price_currency": null,
     "is_paid": false,
-    "rating": 3,
+    "rating": "3,0",
     "photos": [
       "https://play-lh.googleusercontent.com/ttwNKMBx8vP7IcWH2IbLl2ABQCpfndb-8aYrTMKPqKD1MGC4jQMeGQI9LQ3p4cOBnHiA",
       "https://play-lh.googleusercontent.com/0tWl1ZaOQ5AMBUhxAZnGQJsOL5VBg10N-baLKgseMt5uUAmrQ-sLVQ5eiG3FIVP-2f5_",
@@ -1660,6 +1717,8 @@
     "max_android_api_level": 30
   },
   {
+    "id": "29",
+    "device":"Mobil",
     "app_id": "com.simplemobiletools.notes.pro",
     "app_name": "Simple Notes Pro",
     "app_category": "Productivity",
@@ -1670,7 +1729,7 @@
     "price": 1.19,
     "price_currency": "USD",
     "is_paid": true,
-    "rating": 4,
+    "rating": "4,0",
     "photos": [
       "https://play-lh.googleusercontent.com/nxvnCNXAp2VxaMjTwWhoLblQuuub4nWIie2GkjmodzuJcyRZ71-_GHoKZrPerBKFb8Q",
       "https://play-lh.googleusercontent.com/h9uR5EUe0vJOErVrb4BiUtsuS48iEp4burvS8_LVj9PFLDP7IZd31b-8tWFaWwGmces",
@@ -1717,6 +1776,8 @@
     "max_android_api_level": 33
   },
   {
+    "id": "30",
+    "device":"Mobil",
     "app_id": "com.simplemobiletools.notes",
     "app_name": "Simple Notes",
     "app_category": "Productivity",
@@ -1727,7 +1788,7 @@
     "price": 0,
     "price_currency": null,
     "is_paid": false,
-    "rating": 4,
+    "rating": "3,8",
     "photos": [
       "https://play-lh.googleusercontent.com/Y0dcpF7acIdyTl3dBhuLmRgFIIC5_1OJplXZasmexJrSO3YJocd2Q_5Qu3uU9mHLvX2H",
       "https://play-lh.googleusercontent.com/S358gw8yNdSu8VNES_b9TMqv5ZcCIuxM3azi3aNT3vX2NiPQZdsSVsGAKxH2buLdBHI",
@@ -1774,8 +1835,10 @@
     "max_android_api_level": 33
   },
   {
+    "id": "31",
+    "device":"Mobil",
     "app_id": "com.fluidtouch.noteshelf2",
-    "app_name": "Noteshelf - Notes, Annotations",
+    "app_name": "Noteshelf",
     "app_category": "Productivity",
     "app_developer": "Fluid Touch",
     "num_downloads": "100,000+",
@@ -1784,7 +1847,7 @@
     "price": 4.99,
     "price_currency": "USD",
     "is_paid": true,
-    "rating": 3,
+    "rating": "3,0",
     "photos": [
       "https://play-lh.googleusercontent.com/lS16xatqZ1wlX_hKa14X5-Z2akJTkJCWrB82NH5s84jxHxb5Jfy-cyhtmGZZXMCYoDw",
       "https://play-lh.googleusercontent.com/qG6yUDYr1VP5OL-ncHWNiKpU2JJNt209f9yTI2nbpVe0zGBSII98M5uCpoJmzVk0R_o",
