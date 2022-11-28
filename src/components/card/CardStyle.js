@@ -13,7 +13,8 @@ export const App = styled.div`
 `;
 
 export const Icon = styled.img`
-  width: 8rem;
+  width: 7.5rem;
+  height: 7.5rem;
   /* border: 1px solid; */
   border-radius: 1rem;
 `;

@@ -5,6 +5,14 @@ import { Rating } from "@mui/material";
 import { AiFillStar } from 'react-icons/ai'
 
 function Card() {
+
+//   function adddevice(AppsD) {
+//     for(const element of AppsD) {
+//         element.device = Math.random() > 0.5 ? 'Mobil' : 'Desktop';
+//     }
+//     return AppsD
+// }
+
   return (
     <Container>
       {Apps &&
