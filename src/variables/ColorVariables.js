@@ -4,6 +4,7 @@ const dark = "#373737";
 const light = "#fff";
 const primary = "#2370e0";
 const secondary = "#184382";
+const footer= "#A0A1A4"
 
 export const txtDark = `"color: ${dark}`;
 export const txtLight = `color: ${light}`;
@@ -14,3 +15,4 @@ export const bgDark = `background-color: ${dark}`;
 export const bgLight = `background-color: ${light}`;
 export const bgPrimary = `background-color: ${primary}`;
 export const bgSecondary = `background-color: ${secondary}`;
+export const bgFooter = `background-color: ${footer}`;
