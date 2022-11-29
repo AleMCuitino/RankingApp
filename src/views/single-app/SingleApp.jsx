@@ -10,9 +10,10 @@ export default function SingleApp() {
         <>
             <Navbar />
             <InfoApp />
-            <ComentsList />
-            <ComentForm />
-            <Footer />
+            {/* <ComentsList />
+            <ComentForm /> */}
+
+            {/* <Footer /> */}
         </>
     )
 }

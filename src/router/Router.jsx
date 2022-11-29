@@ -10,6 +10,7 @@ const Router = () => {
             <Routes>
                 <Route path="/" element={<Home />}></Route>
                 <Route path="/singleapp" element={<SingleApp />}></Route>
+                
             </Routes>
         </BrowserRouter>
     );
