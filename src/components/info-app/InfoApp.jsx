@@ -1,6 +1,8 @@
 import React from "react";
-import { ContainerImgApp } from "./InfoAppStyle";
+import { ContainerImgApp, ContainerDataApp, ClasificationApp, TitleDataApp, IconEditApp, ContainarText } from "./InfoAppStyle";
 import { AiFillStar } from "react-icons/ai";
+import { HiTrash } from "react-icons/hi";
+import { CiEdit }  from "react-icons/ci"
 
 function InfoApp() {
   return (
@@ -24,24 +26,27 @@ function InfoApp() {
         />
       </ContainerImgApp>
 
-      <div className="ContainerDataApp">
-        <div>
-          <img
-            src="https://play-lh.googleusercontent.com/9bJoeaPbGTB8Tz_h4N-p-6ReRd8vSS-frZb2tmJulaGIoTKElKj3zpmcFJvnS96ANZP5"
-            alt=""
-          />
-          <div>
-            <h2>Name</h2>
+      <ContainerDataApp>
+          <img src="https://play-lh.googleusercontent.com/9bJoeaPbGTB8Tz_h4N-p-6ReRd8vSS-frZb2tmJulaGIoTKElKj3zpmcFJvnS96ANZP5" alt=""/>
+          <TitleDataApp>
+            <h3>Name</h3>
             <p>Device</p>
-            <div className="star">
-              <AiFillStar />
+            <ClasificationApp>
+              <AiFillStar style={{color:"#2370e0"}}/>
               <span>
                 <b>4,5</b>
               </span>
-            </div>
-          </div>
-        </div>
-      </div>
+            </ClasificationApp>
+          </TitleDataApp>
+          <IconEditApp>
+            <HiTrash style={{color:"#2370e0"}}/>
+            <CiEdit style={{color:"#2370e0"}}/>
+          </IconEditApp>
+      </ContainerDataApp>
+      <ContainarText>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti quia laudantium architecto cupiditate mollitia! Labore, deleniti inventore natus ad dolorum blanditiis perferendis. Corrupti inventore dolor quisquam dignissimos porro obcaecati. Sunt.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti adipisci qui et. Fugiat cum distinctio error natus consequuntur tenetur blanditiis, aliquam corporis ut ipsum sit earum accusantium enim a aut.
+      </ContainarText>
     </>
   );
 }
