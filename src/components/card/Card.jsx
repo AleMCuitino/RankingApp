@@ -2,9 +2,35 @@ import React from "react";
 import Apps from "../../data/app.json";
 import { App, Container, Icon, TextContainer } from "./CardStyle";
 import { Rating } from "@mui/material";
-import { AiFillStar } from 'react-icons/ai'
+import { AiFillStar } from 'react-icons/ai';
+import { useState } from 'react';
+
+
+//function AddPropietyType = (app) => {
+//  app.Type = (0);
+//  console.log(Apps);
+//}
+
+
 
 function Card() {
+  const [data] = useState(Apps)
+  for (const obj of data){
+    const random = Math.floor(Math.random() *3);
+
+    switch (random) {
+      case 1:
+        obj.type='mobile'
+        break;
+      case 2:
+        obj.type='desktop'
+        break;
+      default:
+        obj.type='app'
+        break;
+    }
+  }
+  console.log(Apps)
   return (
     <Container>
       {Apps &&
