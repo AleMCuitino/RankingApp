@@ -14,6 +14,14 @@ import { useState } from 'react';
 
 
 function Card() {
+
+//   function adddevice(AppsD) {
+//     for(const element of AppsD) {
+//         element.device = Math.random() > 0.5 ? 'Mobil' : 'Desktop';
+//     }
+//     return AppsD
+// }
+
   const [data] = useState(Apps)
   for (const obj of data){
     const random = Math.floor(Math.random() *3);
@@ -44,15 +52,16 @@ function Card() {
                 </span>
                 <span>{app.device}</span>
                 <div className="star">
-                  <AiFillStar/>
+                  <AiFillStar style={{color: "#2670E0"}}/>
                   <span>
                     <b>{app.rating}</b>
                   </span>
                 </div>
                 <Rating
                   name="half-rating-read"
-                  defaultValue={parseInt(app.rating)}
-                  precision={0.1}
+                  style={{color: "#2370E0"}}
+                  defaultValue={parseFloat(app.rating)}
+                  precision={0.5}
                   readOnly
                 />
               </TextContainer>
