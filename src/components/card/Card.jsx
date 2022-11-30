@@ -1,23 +1,16 @@
-import {React,useState} from "react";
+import { React, useState } from "react";
 
 import { App, Icon, TextContainer } from "./CardStyle";
 import { Rating } from "@mui/material";
-import { AiFillStar } from 'react-icons/ai';
-import {Link} from "react-router-dom";
+import { AiFillStar } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
-
-
-function Card({app}) {
-
-
+function Card({ app }) {
   return (
     <>
       <App>
-      <Link to={`/${app.app_id}`}>
-
-        <Icon src={app.app_icon} alt="descr" />
-
-
+        <Link to={`/${app.app_id}`}>
+          <Icon src={app.app_icon} alt="descr" />
         </Link>
         <TextContainer>
           <span>

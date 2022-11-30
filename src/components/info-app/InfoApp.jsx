@@ -12,7 +12,7 @@ function InfoApp() {
   const {id} = useParams()
 
   const findApp = Apps.filter(
-    (app) => app.app_id === id
+    (apps) => apps.app_id === id
   )
 
  
@@ -21,35 +21,36 @@ function InfoApp() {
   return (
     <>
     {
-      findApp.map((single,index) =>  (
+      findApp.map((apps,index) =>  (
 
         <div key={index}>
 
 
       <ContainerImgApp>
         <img
-          src="https://play-lh.googleusercontent.com/qW1OCeXIVPbBFRtmiUSYhzRfhwEV1CwJa5367zJjBwHktdp1l_tXG1zHWC5Xn4wJYQ"
-          alt=""
+          src={apps.photos[0]}
+          alt="descr1"
           />
-        <img
-          src="https://play-lh.googleusercontent.com/OaJ9ioyoRept6HWOMXjGkA8IMkfh1st9JEdIOyvpemFmFNFI50frodVswWNcAgFxzg"
-          alt=""
+          <img
+          src={apps.photos[2]}
+          alt="descr2"
           />
-        <img
-          src="https://play-lh.googleusercontent.com/W6pBP57UU3sGnhrVO_SWywKMb5YwKcDoQW3hBxW3L0pV4UyzS7IDbxaqD_vK6qHg4i4"
-          alt=""
+          <img
+          src={apps.photos[3]}
+          alt="descr3"
           />
-        <img
-          src="https://play-lh.googleusercontent.com/j0W5FC6v_GeR-8Z-YnXqrhR3Rw2LDLJQ6yQ6HpnzzRdSrz9Wcl3bylBnjpRnrEQzBQ"
-          alt=""
+          <img
+          src={apps.photos[4]}
+          alt="descr4"
           />
+        
       </ContainerImgApp>
 
       <ContainerDataApp>
-          <img src={single.app_icon} alt=""/>
+          <img src={apps.app_icon} alt=""/>
           <TitleDataApp>
-            <h3>Name</h3>
-            <p>Device</p>
+            <h3>{apps.app_name}</h3>
+            <p>{apps.type}</p>
             <ClasificationApp>
               <AiFillStar style={{color:"#2370e0"}}/>
               <span>
@@ -63,8 +64,7 @@ function InfoApp() {
           </IconEditApp>
       </ContainerDataApp>
       <ContainarText>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti quia laudantium architecto cupiditate mollitia! Labore, deleniti inventore natus ad dolorum blanditiis perferendis. Corrupti inventore dolor quisquam dignissimos porro obcaecati. Sunt.
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti adipisci qui et. Fugiat cum distinctio error natus consequuntur tenetur blanditiis, aliquam corporis ut ipsum sit earum accusantium enim a aut.
+      {apps.app_description}
       </ContainarText>
       </div>
     ))
