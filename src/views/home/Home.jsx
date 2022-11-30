@@ -13,7 +13,7 @@ export default function Home() {
       <Navbar/>
       <FilterButtons/>
       <ContainerApps>
-      {Apps.map((app) => {
+      {Apps && Apps.map((app) => {
         return <Card key={app.app_id} app={app}/>
       })}
       </ContainerApps>    
