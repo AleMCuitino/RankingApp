@@ -1,4 +1,4 @@
-const data =[
+export const data =[
   {
     app_id: "com.google.android.keep",
     app_name: "Google Keep - Notes and Lists",
