@@ -4,6 +4,7 @@ import { App, Container, Icon, TextContainer } from "./CardStyle";
 import { Rating } from "@mui/material";
 import { AiFillStar } from 'react-icons/ai'
 
+<<<<<<< HEAD
 function Card() {
 
 //   function adddevice(AppsD) {
@@ -13,12 +14,12 @@ function Card() {
 //     return AppsD
 // }
 
+=======
+function Card({app}) {
+>>>>>>> 71410ce8df41344dffde85cdb46634171db45885
   return (
-    <Container>
-      {Apps &&
-        Apps.map((app) => {
-          return (
-            <App key={app.id}>
+    <>
+            <App>
               <Icon src={app.app_icon} alt="descr" />
               <TextContainer>
                 <span>
@@ -40,9 +41,8 @@ function Card() {
                 />
               </TextContainer>
             </App>
-          );
-        })}
-    </Container>
+         
+    </>
   );
 }
 
