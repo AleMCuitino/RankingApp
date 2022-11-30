@@ -13,9 +13,9 @@ function Card({app}) {
   return (
     <>
       <App>
-      {/* <a href={app.app_page_link}> */}
+      <a href={app.app_page_link}>
         <Icon src={app.app_icon} alt="descr" />
-        {/* </a> */}
+        </a>
         <TextContainer>
           <span>
             <b>{app.app_name}</b>
