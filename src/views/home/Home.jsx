@@ -1,10 +1,10 @@
-import  Card  from '../../components/card/Card'
 import React from 'react'
 import Navbar from '../../components/navbar/Navbar';
-import Footer from '../../components/footer/Footer'
-import Apps from '../../data/app.json'
 import FilterButtonsStyled from '../../components/filter-buttons/FilterButtons';
+import  Card  from '../../components/card/Card'
+import Footer from '../../components/footer/Footer'
 import {ContainerApps} from './HomeStyle'
+import Apps from '../../data/app.json'
 
 
 export default function Home() {
@@ -17,7 +17,6 @@ export default function Home() {
         return <Card key={app.app_id} app={app}/>
       })}
       </ContainerApps>    
-
     </>
     )
 }
