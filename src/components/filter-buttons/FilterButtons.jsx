@@ -4,13 +4,11 @@ import { FilterButtonsContainer } from "./FilterButtonsContainer";
 
 function FilterButtons() {
   return (
- 
-      <FilterButtonsContainer>
-        <FilterButton text="Mejores"/>
-        <FilterButton text="Intermedias"/>
-        <FilterButton text="Peores"/>
-      </FilterButtonsContainer>
-      
+    <FilterButtonsContainer>
+      <FilterButton text="Mejores" />
+      <FilterButton text="Intermedias" />
+      <FilterButton text="Peores" />
+    </FilterButtonsContainer>
   );
 }
 
