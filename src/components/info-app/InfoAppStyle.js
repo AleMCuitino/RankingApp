@@ -13,7 +13,7 @@ export const ContainerDataApp = styled.div`
 padding: 0rem 10rem 0rem 10rem;
 display: flex;
 justify-content: flex-start;
-align-items: center;
+align-items: flex-start;
 
 img{
     height: 6rem;    
