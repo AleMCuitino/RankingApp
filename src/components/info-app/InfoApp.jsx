@@ -9,7 +9,7 @@ import {
   ContainerDataRanking,
   ContainerDataRankingLinear,
   ContainerInfoApp,
-  ClasificationInfoApp
+  RatingInfoApp,
 } from "./InfoAppStyle";
 import { AiFillStar } from "react-icons/ai";
 import { HiTrash } from "react-icons/hi";
@@ -57,7 +57,7 @@ function InfoApp() {
           </ContainerDataApp>
 
           <ContainerInfoApp>
-            <ClasificationInfoApp>
+            <RatingInfoApp>
               <h3>Ratings and reviews</h3>
               <span>{apps.rating}</span>
               <ContainerDataRanking>
@@ -75,7 +75,7 @@ function InfoApp() {
                   5<LinearProgress variant="determinate" value={95} />
                 </ContainerDataRankingLinear>
               </ContainerDataRanking>
-            </ClasificationInfoApp>
+            </RatingInfoApp>
             <ContainerText>{apps.app_description}</ContainerText>
           </ContainerInfoApp>  
           <ComentsList/>

@@ -13,7 +13,7 @@ export const ContainerDataApp = styled.div`
 padding: 0rem 10rem 0rem 10rem;
 display: flex;
 justify-content: flex-start;
-align-items: center;
+align-items: flex-start;
 
 img{
     height: 6rem;    
@@ -34,13 +34,16 @@ justify-content: space-between;
 export const ClasificationApp = styled.div`
 `
 
-export const ClasificationInfoApp = styled.div`
-padding: 0rem 5rem 0rem 0rem;
-
+export const RatingInfoApp = styled.div`
+padding: 0rem 2.5rem 0rem 0rem;
+width: 35rem;
+h3 {
+    font-size: 1.5rem;
+}
 span{
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight:bolder;
-    justify-content: center;
+    text-justify: center;
 }
 `
 export const ContainerDataRanking = styled.div`
