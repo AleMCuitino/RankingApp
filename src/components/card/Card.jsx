@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 function Card({ app }) {
   return (
     <>
-      <App>
+      <App key={app.app_id}>
         <Link to={`/${app.app_id}`}>
           <Icon src={app.app_icon} alt="descr" />
         </Link>
@@ -16,7 +16,7 @@ function Card({ app }) {
           <span>
             <b>{app.app_name}</b>
           </span>
-          <span>{app.device}</span>
+          <span>{app.type}</span>
           <div className="star">
             <AiFillStar style={{ color: "#2670E0" }} />
             <span>

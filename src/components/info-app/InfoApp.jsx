@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { ContainerImgApp, ContainerDataApp, ClasificationApp, TitleDataApp, IconEditApp, ContainarText } from "./InfoAppStyle";
 import { AiFillStar } from "react-icons/ai";
 import { HiTrash } from "react-icons/hi";
@@ -11,17 +11,17 @@ function InfoApp() {
 
   const {id} = useParams()
 
-  const findApp = Apps.filter(
+  // console.log(id)
+  
+
+  const FindApp = Apps.filter(
     (apps) => apps.app_id === id
   )
-
- 
-
 
   return (
     <>
     {
-      findApp.map((apps,index) =>  (
+      FindApp.map((apps,index) =>  (
 
         <div key={index}>
 
