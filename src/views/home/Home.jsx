@@ -43,7 +43,7 @@ export default function Home() {
     if (order === "Intermedias") {
       const intermediateAppsList = [
         ...new Set(
-          Apps.filter((app) => app.rating >= 3 && app.rating < 4).sort((a, b) =>
+          Apps.filter((app) => app.rating > 2 && app.rating < 4).sort((a, b) =>
             a.rating > b.rating ? -1 : 1
           )
         ),
@@ -72,13 +72,14 @@ export default function Home() {
       <button onClick={() => updateAppsList("Intermedias")}>Intermedias</button>
       <button onClick={() => updateAppsList("Peores")}>Peores</button>
       <FilterButtonsStyled />
-      {orderApps.map((app) => {
+      {orderApps.sort().map((app) => {
         return (
           <>
-            <div key={Math.random(1000000000000000000 * 0.1)}>
-              <img src={app.app_icon} alt={app.app_name} />
+            {/* {console.log(app.id)} */}
+            <div key={app.id}>
               <h2>{app.app_name}</h2>
               <h3>{app.rating}</h3>
+              <h4>{app.id}</h4>
             </div>
           </>
         );
