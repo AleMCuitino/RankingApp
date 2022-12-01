@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   ContainerImgApp,
   ContainerDataApp,
@@ -8,6 +8,8 @@ import {
   ContainerText,
   ContainerDataRanking,
   ContainerDataRankingLinear,
+  ContainerInfoApp,
+  ClasificationInfoApp
 } from "./InfoAppStyle";
 import { AiFillStar } from "react-icons/ai";
 import { HiTrash } from "react-icons/hi";
@@ -39,12 +41,12 @@ function InfoApp() {
           <ContainerDataApp>
             <img src={apps.app_icon} alt="" />
             <TitleDataApp>
-              <h3>{apps.app_name}</h3>
+              <h2>{apps.app_name}</h2>
               <p>{apps.type}</p>
               <ClasificationApp>
                 <AiFillStar style={{ color: "#2370e0" }} />
                 <span>
-                  <b>4,5</b>
+                  <b>{apps.rating}</b>
                 </span>
               </ClasificationApp>
             </TitleDataApp>
@@ -54,28 +56,28 @@ function InfoApp() {
             </IconEditApp>
           </ContainerDataApp>
 
-          <ContainerText>{apps.app_description}</ContainerText>
-          <h2>Ratings and reviews</h2>
-          <span>4.5</span>
-          <ContainerDataRanking>
-            <Rating
-              name="half-rating-read"
-              defaultValue={4.5}
-              precision={0.1}
-              readOnly
-            />
-            <ContainerDataRankingLinear>
-              <LinearProgress variant="determinate" value={90} />
-              <LinearProgress variant="determinate" value={1} />
-              <LinearProgress variant="determinate" value={1} />
-              <LinearProgress variant="determinate" value={1} />
-              <LinearProgress variant="determinate" value={1} />
-            </ContainerDataRankingLinear>
-          </ContainerDataRanking>
-          <div>
-            <ComentsList/>
-            <ComentForm/>
-          </div>
+          <ContainerInfoApp>
+            <ClasificationInfoApp>
+              <h3>Ratings and reviews</h3>
+              <span>{apps.rating}</span>
+              <ContainerDataRanking>
+                <Rating
+                  name="half-rating-read"
+                  defaultValue={parseFloat(apps.rating)}
+                  precision={0.1}
+                  readOnly
+                />
+                <ContainerDataRankingLinear>
+                  1<LinearProgress variant="determinate" value={1} />
+                  2<LinearProgress variant="determinate" value={10} />
+                  3<LinearProgress variant="determinate" value={50} />
+                  4<LinearProgress variant="determinate" value={60} />
+                  5<LinearProgress variant="determinate" value={95} />
+                </ContainerDataRankingLinear>
+              </ContainerDataRanking>
+            </ClasificationInfoApp>
+            <ContainerText>{apps.app_description}</ContainerText>
+          </ContainerInfoApp>  
         </div>
       ))}
     </>
