@@ -7,7 +7,7 @@ export const FormContainer = styled.div`
   button{
     border: none;
     padding: 0.2rem 4rem;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     height: 2rem;
     width: 7rem;
     cursor: pointer;
@@ -27,6 +27,7 @@ export const FormInput = styled.div`
   height: ${(props) => props.Height};
  
   background-color: #A0A1A4;
+  border-radius: 0.8rem;
   
 `;
 
@@ -38,4 +39,5 @@ export const Input = styled.input`
   border: none;    
   background-color: #ffffff;
   -webkit-text-fill-color: #A0A1A4;
+  border-radius: 0.8rem;
 `;
