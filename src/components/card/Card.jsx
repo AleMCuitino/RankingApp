@@ -8,8 +8,8 @@ import { Link } from "react-router-dom";
 function Card({ app }) {
   return (
     <>
-      <App key={app.app_id}>
-        <Link to={`/${app.app_id}`}>
+      <App key={app.id}>
+        <Link to={`/${app.id}`}>
           <Icon src={app.app_icon} alt="descr" />
         </Link>
         <TextContainer>
