@@ -5,27 +5,52 @@ display: flex;
 justify-content: center;
 
 img{
-    width: 12rem;    
+    padding: 5rem 0rem 5rem 0rem;
+    width: 15rem;    
 }
 `
 export const ContainerDataApp = styled.div`
-padding: 2rem 0 2rem 0;
+padding: 0rem 10rem 0rem 10rem;
 display: flex;
-justify-content: center;
+justify-content: flex-start;
 align-items: center;
 
 img{
     height: 6rem;    
 }
 `
-export const ClasificationApp = styled.div`
-`
+
 export const TitleDataApp = styled.div`
+padding: 0rem 0rem 0rem 5rem;
 `
 export const IconEditApp = styled.div`
+padding: 0rem 0rem 0rem 30rem;
 `
+
+export const ClasificationApp = styled.div`
+`
+
+export const ClasificationInfoApp = styled.div`
+padding: 0rem 5rem 0rem 0rem;
+
+span{
+    font-size: 3rem;
+    font-weight:bolder;
+    justify-content: center;
+}
+`
+export const ContainerDataRanking = styled.div`
+`
+
 export const ContainerText = styled.p`
 `
-export const ContainerDataRanking = styled.div``
 
-export const ContainerDataRankingLinear = styled.div`` 
+export const ContainerDataRankingLinear = styled.div`
+padding: 2rem 0rem 5rem 0rem;
+` 
+
+export const ContainerInfoApp = styled.div`
+padding: 5rem 10rem 5rem 10rem;
+display: flex;
+justify-content: center;
+`
