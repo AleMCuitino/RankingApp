@@ -16,9 +16,21 @@ import { HiTrash } from "react-icons/hi";
 import { CiEdit } from "react-icons/ci";
 import { Rating, LinearProgress } from "@mui/material";
 import { useParams } from "react-router-dom";
+import Apps from "../../data/app.json"
+import { useParams } from "react-router-dom";
 import Apps from "../../data/app.json";
 
 function InfoApp() {
+
+  const {id} = useParams()
+
+  // console.log(id)
+  
+
+  const FindApp = Apps.filter(
+    (apps) => apps.app_id === id
+  )
+
   const { id } = useParams();
 
   const findApp = Apps.filter((apps) => apps.app_id === id);
