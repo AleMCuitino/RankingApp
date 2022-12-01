@@ -1,11 +1,11 @@
 import React from "react";
-import { ContainerImgApp, ContainerDataApp, ClasificationApp, TitleDataApp, IconEditApp, ContainarText } from "./InfoAppStyle";
+import { ContainerImgApp, ContainerDataApp, ClasificationApp, TitleDataApp, IconEditApp, ContainerText, ContainerDataRanking, ContainerDataRankingLinear } from "./InfoAppStyle";
 import { AiFillStar } from "react-icons/ai";
 import { HiTrash } from "react-icons/hi";
 import { CiEdit }  from "react-icons/ci";
+import { Rating, LinearProgress } from "@mui/material";
 import { useParams } from "react-router-dom";
 import Apps from "../../data/app.json"
-
 
 function InfoApp() {
 
@@ -63,12 +63,38 @@ function InfoApp() {
             <CiEdit style={{color:"#2370e0"}}/>
           </IconEditApp>
       </ContainerDataApp>
+      
+      <ContainerText>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti quia laudantium architecto cupiditate mollitia! Labore, deleniti inventore natus ad dolorum blanditiis perferendis. Corrupti inventore dolor quisquam dignissimos porro obcaecati. Sunt.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti adipisci qui et. Fugiat cum distinctio error natus consequuntur tenetur blanditiis, aliquam corporis ut ipsum sit earum accusantium enim a aut.
+      </ContainerText>
+        <h2>Ratings and reviews</h2>
+        <span>4.5</span>
+      <ContainerDataRanking>
+          <Rating
+                  name="half-rating-read"
+                  defaultValue={4.5}
+                  precision={0.1}
+                  readOnly
+                />
+          <ContainerDataRankingLinear>
+            <LinearProgress variant="determinate" value={90} />
+            <LinearProgress variant="determinate" value={1} />
+            <LinearProgress variant="determinate" value={1} />
+            <LinearProgress variant="determinate" value={1} />
+            <LinearProgress variant="determinate" value={1} />
+          </ContainerDataRankingLinear>
+        </ContainerDataRanking>
+      <div>   
+    </div>
+    
       <ContainarText>
       {apps.app_description}
       </ContainarText>
       </div>
     ))
   }
+
     </>
   );
 }

@@ -24,5 +24,8 @@ export const TitleDataApp = styled.div`
 `
 export const IconEditApp = styled.div`
 `
-export const ContainarText = styled.p`
+export const ContainerText = styled.p`
 `
+export const ContainerDataRanking = styled.div``
+
+export const ContainerDataRankingLinear = styled.div`` 
