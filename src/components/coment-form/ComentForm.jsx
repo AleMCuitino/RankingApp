@@ -5,15 +5,18 @@ function ComentForm() {
   return (
     <FormContainer>
         <p>Add Coment</p>
-      <FormInput>
+      <FormInput Height="auto">
         {/* <label for="name">Name</label> */}
         <Input type="text" name="name" placeholder="Name"></Input>
       </FormInput>
 
-      <FormInput>
+      <FormInput Height="8rem">
         {/* <label for="email">Email</label> */}
-        <Input type="text" name="coment" placeholder="Description"></Input>
+        <Input type="text" name="coment" placeholder="Description" HeightInput="6rem"></Input>
       </FormInput>
+      <button>
+        Send
+      </button>
     </FormContainer>
   );
 }

@@ -78,6 +78,8 @@ function InfoApp() {
             </ClasificationInfoApp>
             <ContainerText>{apps.app_description}</ContainerText>
           </ContainerInfoApp>  
+          <ComentsList/>
+          <ComentForm/>
         </div>
       ))}
     </>
