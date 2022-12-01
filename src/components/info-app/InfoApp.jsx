@@ -16,20 +16,9 @@ import { HiTrash } from "react-icons/hi";
 import { CiEdit } from "react-icons/ci";
 import { Rating, LinearProgress } from "@mui/material";
 import { useParams } from "react-router-dom";
-import Apps from "../../data/app.json"
-import { useParams } from "react-router-dom";
 import Apps from "../../data/app.json";
 
 function InfoApp() {
-
-  const {id} = useParams()
-
-  // console.log(id)
-  
-
-  const FindApp = Apps.filter(
-    (apps) => apps.app_id === id
-  )
 
   const { id } = useParams();
 
@@ -39,6 +28,7 @@ function InfoApp() {
     <>
       {findApp.map((apps, index) => (
         <div key={index}>
+          
           <ContainerImgApp>
             <img src={apps.photos[0]} alt="descr1" />
             <img src={apps.photos[2]} alt="descr2" />

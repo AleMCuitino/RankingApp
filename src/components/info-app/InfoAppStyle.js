@@ -25,6 +25,10 @@ padding: 0rem 0rem 0rem 5rem;
 `
 export const IconEditApp = styled.div`
 padding: 0rem 0rem 0rem 30rem;
+font-size: 2rem;
+width: 5rem;
+display: flex;
+justify-content: space-between;
 `
 
 export const ClasificationApp = styled.div`
