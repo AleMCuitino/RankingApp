@@ -20,14 +20,15 @@ function Card({ app }) {
           <div className="star">
             <AiFillStar style={{ color: "#2670E0" }} />
             <span>
-              <b>{app.rating}</b>
+              <b>{app.rating.toString()}</b>
+              {console.log(app.rating.valueOf())}
             </span>
           </div>
           <Rating
             name="half-rating-read"
             style={{ color: "#2370E0" }}
             defaultValue={parseFloat(app.rating)}
-            precision={0.5}
+            precision={0.1}
             readOnly
           />
         </TextContainer>

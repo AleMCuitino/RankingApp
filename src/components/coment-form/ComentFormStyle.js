@@ -2,7 +2,10 @@ import styled from "styled-components";
 import { bgPrimary } from "../../variables/ColorVariables";
 
 export const FormContainer = styled.div`
-  margin: 10rem 18rem 1rem 18rem;
+  /* margin: 10rem 18rem 1rem 18rem; */
+  padding: 1rem;
+  
+  width: 60vw;
 
   button{
     border: none;
@@ -26,18 +29,19 @@ export const FormInput = styled.div`
   /* margin: 2px; */
   height: ${(props) => props.Height};
  
-  background-color: #A0A1A4;
+  /* background-color: #A0A1A4; */
   border-radius: 0.8rem;
   
 `;
 
 export const Input = styled.input`
-  padding: 1rem;
+  /* padding: 1rem; */
   width: 96.7%;
   outline: none;
   height: ${(props) => props.HeightInput};
-  border: none;    
+  border: #A0A1A4 1px solid;  
+  padding: 1rem ;
   background-color: #ffffff;
-  -webkit-text-fill-color: #A0A1A4;
+  /* -webkit-text-fill-color: #A0A1A4; */
   border-radius: 0.8rem;
 `;

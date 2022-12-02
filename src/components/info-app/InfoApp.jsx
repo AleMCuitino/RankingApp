@@ -10,15 +10,18 @@ import {
   ContainerDataRankingLinear,
   ContainerInfoApp,
   RatingInfoApp,
+  IconReturn,
+  CoverSingle,
+  MainContainer,
 } from "./InfoAppStyle";
 import { AiFillStar } from "react-icons/ai";
-import { HiTrash } from "react-icons/hi";
-import { CiEdit } from "react-icons/ci";
+import { HiOutlineTrash, HiOutlinePencilAlt } from "react-icons/hi";
 import { Rating, LinearProgress } from "@mui/material";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Apps from "../../data/app.json";
 import ComentsList from "../coments-list/ComentsList";
 import ComentForm from "../coment-form/ComentForm";
+import { FaArrowAltCircleLeft } from "react-icons/fa";
 
 function InfoApp() {
   const { id } = useParams();
@@ -30,7 +33,12 @@ function InfoApp() {
   return (
     <>
       {FindApp.map((apps, index) => (
-        <div key={index}>
+        <MainContainer key={index}>
+          <IconReturn>
+            <Link to="/">
+              <FaArrowAltCircleLeft style={{ color: "#2370e0" }} />
+            </Link>
+          </IconReturn>
           <ContainerImgApp>
             <img src={apps.photos[0]} alt="descr1" />
             <img src={apps.photos[2]} alt="descr2" />
@@ -39,21 +47,28 @@ function InfoApp() {
           </ContainerImgApp>
 
           <ContainerDataApp>
-            <img src={apps.app_icon} alt="" />
+            <CoverSingle>
+              <div className="imgcoversingle">
+                <img src={apps.app_icon} alt="" />
+              </div>
             <TitleDataApp>
               <h2>{apps.app_name}</h2>
               <p>{apps.type}</p>
               <ClasificationApp>
-                <AiFillStar style={{ color: "#2370e0" }} />
+                <AiFillStar name= "size-medium" style={{ color: "#2370e0" }} />
                 <span>
                   <b>{apps.rating}</b>
                 </span>
               </ClasificationApp>
             </TitleDataApp>
+
+            </CoverSingle>
+
             <IconEditApp>
-              <HiTrash style={{ color: "#2370e0" }} />
-              <CiEdit style={{ color: "#2370e0" }} />
+              <HiOutlineTrash style={{ color: "#2370e0" }} />
+              <HiOutlinePencilAlt style={{ color: "#2370e0" }} />
             </IconEditApp>
+
           </ContainerDataApp>
 
           <ContainerInfoApp>
@@ -76,11 +91,12 @@ function InfoApp() {
                 </ContainerDataRankingLinear>
               </ContainerDataRanking>
             </RatingInfoApp>
+            
             <ContainerText>{apps.app_description}</ContainerText>
-          </ContainerInfoApp>  
-          <ComentsList/>
-          <ComentForm/>
-        </div>
+          </ContainerInfoApp>
+          <ComentsList />
+          <ComentForm />
+        </MainContainer>
       ))}
     </>
   );
