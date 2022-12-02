@@ -3,42 +3,33 @@ import React, { useState } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import Apps from "../../data/app.json";
-import FilterButtonsStyled from "../../components/filter-buttons/FilterButtons";
+import FilterButtons from "../../components/filter-buttons/FilterButtons";
 import { ContainerApps } from "./HomeStyle";
 
-import ButtonsList from "../../components/filter-buttons/ButtonsList";
+import CheckboxList from "../../components/filter-buttons/ButtonsList";
 
 export default function Home() {
   // New array with ordered apps from higher to lower ranking value.
-  const bestAppsList = [
-    ...new Set(
-      Apps.filter((app) => app.rating >= 4).sort((a, b) =>
-        parseFloat(a.rating) > parseFloat(b.rating) ? -1 : 1
-      )
-    ),
-  ];
+  const bestAppsList = Apps.filter((app) => app.rating >= 4).sort((a, b) =>
+    a.rating > b.rating ? -1 : 1
+  );
 
   //New array with all "Type" values and add "All" as a "Type" value.
-  const allAppTypes = ["All", ...new Set(Apps.map((app) => app.type))];
+  const allAppTypes = [...new Set(Apps.map((app) => app.type))];
 
-  const [orderApps, setOrderApps] = useState(bestAppsList); // Render
-  const [appTypes, setDevices] = useState(allAppTypes);
+  const [appsList, setAppsList] = useState(bestAppsList); // Render
+  const [currentListOrder, setCurrentListOrder] = useState(bestAppsList);
 
-  const [currentListOrder, setCurrentListOrder] = useState();
-
-  const filterDevice = (type) => {
-    if (type === "All") {
-      setOrderApps(currentListOrder);
-      return;
-    }
+  const filterAppType = (type) => {
     const filteredData = currentListOrder.filter((app) => app.type === type);
-    setOrderApps(filteredData);
+    setAppsList(filteredData); // Estado 1
   };
 
   const updateAppsList = (order) => {
+    //Mejores, Peores, Intermedias
     if (order === "Mejores") {
-      setOrderApps(bestAppsList);
-      setCurrentListOrder(bestAppsList);
+      setAppsList(bestAppsList); // Estado 1 - Render
+      setCurrentListOrder(bestAppsList); // Estado 2 - Original Copy
     }
     if (order === "Intermedias") {
       const intermediateAppsList = [
@@ -48,47 +39,32 @@ export default function Home() {
           )
         ),
       ];
-      setOrderApps(intermediateAppsList);
-      setCurrentListOrder(intermediateAppsList);
+      setAppsList(intermediateAppsList); // Render
+      setCurrentListOrder(intermediateAppsList); // Original Copy
     }
     if (order === "Peores") {
       const worstAppsList = [
         ...new Set(
           Apps.filter((app) => app.rating <= 2).sort((a, b) =>
-            parseFloat(a.rating) > parseFloat(b.rating) ? 1 : -1
+            a.rating > b.rating ? 1 : -1
           )
         ),
       ];
-      setOrderApps(worstAppsList);
-      setCurrentListOrder(worstAppsList);
+      setAppsList(worstAppsList); // Render
+      setCurrentListOrder(worstAppsList); // Original Copy
     }
   };
 
   return (
     <>
       <Navbar />
-      <ButtonsList devices={allAppTypes} filterDevice={filterDevice} />
-      <button onClick={() => updateAppsList("Mejores")}>Mejores</button>
-      <button onClick={() => updateAppsList("Intermedias")}>Intermedias</button>
-      <button onClick={() => updateAppsList("Peores")}>Peores</button>
-      <FilterButtonsStyled />
-      {orderApps.sort().map((app) => {
-        return (
-          <>
-            {/* {console.log(app.id)} */}
-            <div key={app.id}>
-              <h2>{app.app_name}</h2>
-              <h3>{app.rating}</h3>
-              <h4>{app.id}</h4>
-            </div>
-          </>
-        );
-      })}
-      {/* <ContainerApps apps={apps}>
-        {apps.map((app) => {
+      <CheckboxList appTypes={allAppTypes} filterAppType={filterAppType} />
+      <FilterButtons updateAppsList={updateAppsList} />
+      <ContainerApps apps={appsList}>
+        {appsList.map((app) => {
           return <Card key={app.app_id} app={app} />;
         })}
-      </ContainerApps> */}
+      </ContainerApps>
     </>
   );
 }
