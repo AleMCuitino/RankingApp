@@ -25,7 +25,7 @@ function InfoApp() {
 
   // console.log(id)
 
-  const FindApp = Apps.filter((apps) => apps.app_id === id);
+  const FindApp = Apps.filter((apps) => apps.id === id);
 
   return (
     <>
