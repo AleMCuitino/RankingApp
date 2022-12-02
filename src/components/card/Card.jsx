@@ -1,4 +1,4 @@
-import {React,useState} from "react";
+import { React, useState } from "react";
 
 import { App, Icon, TextContainer } from "./CardStyle";
 import { Rating } from "@mui/material";
@@ -8,7 +8,7 @@ function Card({ app }) {
   return (
     <>
       <App>
-        {/* <Icon src={app.app_icon} alt="descr" /> */}
+        <Icon src={app.app_icon} alt="descr" />
         <TextContainer>
           <span>
             <b>{app.app_name}</b>
