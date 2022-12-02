@@ -1,12 +1,12 @@
-import React from 'react';
-import { FilterButtonStyled } from './FilterButtonStyle';
+import React from "react";
+import { FilterButtonStyled } from "./FilterButtonStyle";
 
-function FilterButton(props) {
+function FilterButton({ text, updateAppsList, state }) {
   return (
-    <FilterButtonStyled>
-      {props.text}
+    <FilterButtonStyled state onClick={() => updateAppsList(text)}>
+      {text}
     </FilterButtonStyled>
-  )
+  );
 }
 
-export default FilterButton
+export default FilterButton;
