@@ -7,16 +7,18 @@ export const Header = styled.header`
   flex-direction: row;
   height: 3rem;
   justify-content: space-between;
-  padding: 0.2rem 0.5rem;
+  /* padding: 2vw 2vw; */
   align-items: center;
+  margin-bottom: 4vw;
 
   .logo {
-    width: 5rem;
+    width: 10vw;
     display: flex;
     align-items: center;
+    
   }
 
   img {
-    width: 100%;
+    width: 80%;
   }
 `;
