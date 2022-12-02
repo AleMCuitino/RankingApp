@@ -26,9 +26,8 @@ function Card({ app }) {
           </div>
           <Rating
             name="half-rating-read"
-            style={{ color: "#2370E0" }}
             defaultValue={parseFloat(app.rating)}
-            precision={0.1}
+            precision={1}
             readOnly
           />
         </TextContainer>
