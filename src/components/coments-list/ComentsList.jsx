@@ -28,7 +28,7 @@ function ComentsList() {
       </Box>
 
       <Box>
-      <Datas>
+        <Datas>
           <Rating
             name="half-rating-read"
             defaultValue={4}
@@ -49,7 +49,7 @@ function ComentsList() {
       </Box>
 
       <Box>
-      <Datas>
+        <Datas>
           <Rating
             name="half-rating-read"
             defaultValue={5}
@@ -70,7 +70,7 @@ function ComentsList() {
       </Box>
 
       <Box>
-      <Datas>
+        <Datas>
           <Rating
             name="half-rating-read"
             defaultValue={4}
@@ -91,7 +91,7 @@ function ComentsList() {
       </Box>
 
       <Box>
-      <Datas>
+        <Datas>
           <Rating
             name="half-rating-read"
             defaultValue={3}

@@ -51,27 +51,26 @@ function InfoApp() {
               <div className="imgcoversingle">
                 <img src={apps.app_icon} alt="" />
               </div>
-            <TitleDataApp>
-              <h2>{apps.app_name}</h2>
-              <p>{apps.type}</p>
-              <ClasificationApp>
-                <AiFillStar name= "size-medium" style={{ color: "#2370e0" }} />
-                <span>
-                  <b>{apps.rating}</b>
-                </span>
-              </ClasificationApp>
-            </TitleDataApp>
-
+              <TitleDataApp>
+                <h2>{apps.app_name}</h2>
+                <p>{apps.type}</p>
+                <ClasificationApp>
+                  <AiFillStar name="size-medium" style={{ color: "#2370e0" }} />
+                  <span>
+                    <b>{apps.rating}</b>
+                  </span>
+                </ClasificationApp>
+              </TitleDataApp>
             </CoverSingle>
 
             <IconEditApp>
               <HiOutlineTrash style={{ color: "#2370e0" }} />
               <HiOutlinePencilAlt style={{ color: "#2370e0" }} />
             </IconEditApp>
-
           </ContainerDataApp>
 
           <ContainerInfoApp>
+
             <RatingInfoApp>
               <h3>Ratings and reviews</h3>
               <span>{apps.rating}</span>
@@ -90,9 +89,11 @@ function InfoApp() {
                   5<LinearProgress variant="determinate" value={95} />
                 </ContainerDataRankingLinear>
               </ContainerDataRanking>
+
             </RatingInfoApp>
-            
+
             <ContainerText>{apps.app_description}</ContainerText>
+            
           </ContainerInfoApp>
           <ComentsList />
           <ComentForm />

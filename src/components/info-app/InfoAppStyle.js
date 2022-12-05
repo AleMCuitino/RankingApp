@@ -1,9 +1,16 @@
 import styled from "styled-components";
 
+const media = {
+    mobile: `@media(max-width: 900px)`,
+}
+
+
+
 export const MainContainer = styled.div`
 display : flex ;
 flex-direction: column;
 align-items: center;
+
 `
 
 export const IconReturn = styled.div`
@@ -79,20 +86,29 @@ gap: 1vw;
 `
 
 export const ContainerInfoApp = styled.div`
-padding: 5rem 10rem 5rem 10rem;
 display: flex;
-justify-content: center;
+justify-content: space-between;
+width: 80vw;
+
+${media.mobile}{
+    flex-direction: column-reverse;    
+}
 `
 export const RatingInfoApp = styled.div`
-padding: 0rem 2.5rem 0rem 0rem;
-width: 35rem;
+/* padding: 0rem 2.5rem 0rem 0rem; */
+width: 25vw;
+
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 span{
     font-size: 2rem;
     font-weight:bolder;
     text-justify: center;
+}
+
+${media.mobile}{
+    width: auto ;
 }
 `
 export const ContainerDataRanking = styled.div`
@@ -100,6 +116,15 @@ export const ContainerDataRanking = styled.div`
 `
 
 export const ContainerText = styled.p`
+    width: 60%;
+    text-align: justify;
+    font-size: 1.2rem;
+
+    ${media.mobile}{
+    width: 100%;
+}
+    
+    
 `
 
 export const ContainerDataRankingLinear = styled.div`
