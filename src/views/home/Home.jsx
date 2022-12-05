@@ -65,6 +65,7 @@ export default function Home() {
           return <Card key={app.app_id} app={app} />;
         })}
       </ContainerApps>
+      <Footer/>
     </>
   );
 }
