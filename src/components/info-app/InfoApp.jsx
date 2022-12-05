@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import {
   ContainerImgApp,
   ContainerDataApp,
@@ -16,7 +16,7 @@ import {
 } from "./InfoAppStyle";
 import { AiFillStar } from "react-icons/ai";
 import { HiOutlineTrash, HiOutlinePencilAlt } from "react-icons/hi";
-import { Rating, LinearProgress } from "@mui/material";
+import { Rating, LinearProgress, useScrollTrigger } from "@mui/material";
 import { Link, useParams } from "react-router-dom";
 import Apps from "../../data/app.json";
 import ComentsList from "../coments-list/ComentsList";
@@ -25,8 +25,21 @@ import { FaArrowAltCircleLeft } from "react-icons/fa";
 
 function InfoApp() {
   const { id } = useParams();
+  const [coment, setComent] = useState([])
 
-  // console.log(id)
+  function addComent(appTitle){
+    setComent([
+      ...coment,
+      {
+        id: crypto.randomUUID(),
+        title: appTitle,
+        iscompleted: false
+      }
+    ])
+    console.log(id)
+  }
+
+
 
   const FindApp = Apps.filter((apps) => apps.id === id);
 
@@ -96,7 +109,7 @@ function InfoApp() {
             
           </ContainerInfoApp>
           <ComentsList />
-          <ComentForm />
+          <ComentForm onAddComent={addComent}/>
         </MainContainer>
       ))}
     </>
