@@ -8,6 +8,9 @@ export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  h3 {
+    font-size: 2rem;
+  }
 `;
 
 export const IconReturn = styled.div`

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   ContainerImgApp,
   ContainerDataApp,
@@ -22,25 +22,52 @@ import Apps from "../../data/app.json";
 import ComentsList from "../coments-list/ComentsList";
 import ComentForm from "../coment-form/ComentForm";
 import { FaArrowAltCircleLeft } from "react-icons/fa";
+import Appp from "../coments-list/Appp";
+import Tasks from "../coments-list/Tasks";
+import Header from "../coments-list/Header";
 
 function InfoApp() {
+  // add coment CRUD
+  const [editData, setEditData] = useState(null);
+  const [coments, setComents] = useState(() => {
+    const saveComents = window.localStorage.getItem("comentsData");
+    if (saveComents) {
+      return JSON.parse(saveComents);
+    } else {
+      return [];
+    }
+  });
+
+  useEffect(() => {
+    window.localStorage.setItem("comentsData", JSON.stringify(coments));
+  }, [coments]);
+
+  // inserción de datos
+  const addComent = (coment) => {
+    setComents([...coments, coment]);
+  };
+
+  // editar un comentario
+  const editComent = (coment) => {
+    const newComents = coments.map((el) => (el.id === coment.id ? coment : el));
+    setComents(newComents);
+    setEditData(null);
+  };
+
+  // Eliminar un comentario
+  const deleteComent = (id) => {
+    const isDelete = window.confirm(
+      `¿Deseas eliminar el registro con id: ${id}?`
+    );
+
+    if (isDelete) {
+      const newComents = coments.filter((el) => el.id !== id);
+      setComents(newComents);
+    }
+  };
+
+  //Filter app by app-key
   const { id } = useParams();
-  const [ coments, setComents ] = useState([])
-
-  function addComent(comentName){
-    setComents([
-      ...coments,
-      {
-        id: crypto.randomUUID(),
-        name: comentName,
-        iscompleted: false
-      }
-    ])
-    
-  }
-
-
-
   const FindApp = Apps.filter((apps) => apps.id === id);
 
   return (
@@ -83,7 +110,6 @@ function InfoApp() {
           </ContainerDataApp>
 
           <ContainerInfoApp>
-
             <RatingInfoApp>
               <h3>Ratings and reviews</h3>
               <span>{apps.rating}</span>
@@ -102,14 +128,29 @@ function InfoApp() {
                   5<LinearProgress variant="determinate" value={95} />
                 </ContainerDataRankingLinear>
               </ContainerDataRanking>
-
             </RatingInfoApp>
 
             <ContainerText>{apps.app_description}</ContainerText>
-            
           </ContainerInfoApp>
-          <ComentsList coments={coments}/>
-          <ComentForm onAddComent={addComent}/>
+          <h3>Comments</h3>
+          
+          <ComentsList coments={coments}
+            setEditData={setEditData}
+            deleteComent={deleteComent}/>
+          
+          <ComentForm addComent={addComent}
+            editComent={editComent}
+            editData={editData} />
+          {/* <Tasks
+            coments={coments}
+            setEditData={setEditData}
+            deleteComent={deleteComent}
+          />
+          <Header
+            addComent={addComent}
+            editComent={editComent}
+            editData={editData}
+          /> */}
         </MainContainer>
       ))}
     </>

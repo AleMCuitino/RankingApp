@@ -30,6 +30,10 @@ padding-top:  1.2rem;
 
 export const Text = styled.div`
 width: 100%;
-text-align: justify;
+p{
+    text-align: justify;
+    width: 90%;
+
+}
 
 `

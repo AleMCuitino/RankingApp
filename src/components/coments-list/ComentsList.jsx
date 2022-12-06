@@ -3,123 +3,48 @@ import { Rating } from "@mui/material";
 import { Box, ComentsContainer, Text, Datas } from "./ComentsListStyle";
 import Appp from "./Appp";
 
-function ComentsList({coments}) {
+function ComentsList({ coments, setEditData, deleteComent }) {
   return (
-    <ComentsContainer>
-      <h3>Comentarios</h3>
-      <Box>
-        {coments.map(coment => (
-          <Text key={coment.id}>
-            <p>{coment.name}</p>
+    <>
+    {coments.length === 0 ? (
+      <p>No Coments yet</p>
+      ) : (
+        coments.map((coment, index) => {
+          return (
+            <ComentsContainer>
+            <Box key={index}>
+              <Datas>
+                <Rating
+                  name="half-rating-read"
+                  defaultValue={4.5}
+                  style={{ color: "#2370E0" }}
+                  precision={0.5}
+                  readOnly
+                  />
+              </Datas>
 
-          </Text>
-        ))}
-      </Box>
-      {/* <Box>
-        <Datas>
-          <Rating
-            name="half-rating-read"
-            defaultValue={4.5}
-            style={{ color: "#2370E0" }}
-            precision={0.5}
-            readOnly
-          />
-        </Datas>
-        <Text>
-          <h4>Alexandra</h4>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore
-            voluptate ullam reprehenderit est distinctio nostrum ipsum dolorum
-            sed quaerat sunt a vel provident nobis, error autem quibusdam
-            tempora adipisci facilis.
-          </p>
-        </Text>
-      </Box>
-
-      <Box>
-        <Datas>
-          <Rating
-            name="half-rating-read"
-            defaultValue={4}
-            style={{ color: "#2370E0" }}
-            precision={0.5}
-            readOnly
-          />
-        </Datas>
-        <Text>
-          <h4>Albert</h4>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore
-            voluptate ullam reprehenderit est distinctio nostrum ipsum dolorum
-            sed quaerat sunt a vel provident nobis, error autem quibusdam
-            tempora adipisci facilis.
-          </p>
-        </Text>
-      </Box>
-
-      <Box>
-        <Datas>
-          <Rating
-            name="half-rating-read"
-            defaultValue={5}
-            style={{ color: "#2370E0" }}
-            precision={0.5}
-            readOnly
-          />
-        </Datas>
-        <Text>
-          <h4>Alejandra</h4>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore
-            voluptate ullam reprehenderit est distinctio nostrum ipsum dolorum
-            sed quaerat sunt a vel provident nobis, error autem quibusdam
-            tempora adipisci facilis.
-          </p>
-        </Text>
-      </Box>
-
-      <Box>
-        <Datas>
-          <Rating
-            name="half-rating-read"
-            defaultValue={4}
-            style={{ color: "#2370E0" }}
-            precision={0.5}
-            readOnly
-          />
-        </Datas>
-        <Text>
-          <h4>Federico</h4>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore
-            voluptate ullam reprehenderit est distinctio nostrum ipsum dolorum
-            sed quaerat sunt a vel provident nobis, error autem quibusdam
-            tempora adipisci facilis.
-          </p>
-        </Text>
-      </Box>
-
-      <Box>
-        <Datas>
-          <Rating
-            name="half-rating-read"
-            defaultValue={3}
-            style={{ color: "#2370E0" }}
-            precision={0.5}
-            readOnly
-          />
-        </Datas>
-        <Text>
-          <h4>Eberth</h4>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore
-            voluptate ullam reprehenderit est distinctio nostrum ipsum dolorum
-            sed quaerat sunt a vel provident nobis, error autem quibusdam
-            tempora adipisci facilis.
-          </p>
-        </Text>
-      </Box> */}
-    </ComentsContainer>
+              <Text>
+                <h2>{coment.coment}</h2>
+                <p>{coment.description}</p>
+                <button
+                  className="btn btn-outline-warning mx-1"
+                  onClick={() => setEditData(coment)}
+                  >
+                  Editar
+                </button>
+                <button
+                  className="btn btn-outline-danger mx-1"
+                  onClick={() => deleteComent(coment.id)}
+                  >
+                  Eliminar
+                </button>
+              </Text>
+            </Box>
+            </ComentsContainer>
+          );
+        })
+        )}
+        </>
   );
 }
 
