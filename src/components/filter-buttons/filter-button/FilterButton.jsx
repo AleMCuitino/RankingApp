@@ -1,9 +1,24 @@
 import React from "react";
 import { FilterButtonStyled } from "./FilterButtonStyle";
 
-function FilterButton({ text, updateAppsList }) {
+function FilterButton({
+  text,
+  updateAppsList,
+  value,
+  name,
+  filter,
+  defaultChecked,
+}) {
   return (
-    <FilterButtonStyled onClick={() => updateAppsList(text)}>
+    <FilterButtonStyled
+      onClick={(e) =>
+        updateAppsList(e.target.value).setActiveButton(e.target.value)
+      }
+      defaultChecked={defaultChecked}
+      value={value}
+      name={name}
+      filter={filter}
+    >
       {text}
     </FilterButtonStyled>
   );
