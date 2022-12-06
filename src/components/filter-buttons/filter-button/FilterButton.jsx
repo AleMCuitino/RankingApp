@@ -1,9 +1,9 @@
 import React from "react";
 import { FilterButtonStyled } from "./FilterButtonStyle";
 
-function FilterButton({ text, updateAppsList, state }) {
+function FilterButton({ text, updateAppsList }) {
   return (
-    <FilterButtonStyled state onClick={() => updateAppsList(text)}>
+    <FilterButtonStyled onClick={() => updateAppsList(text)}>
       {text}
     </FilterButtonStyled>
   );
