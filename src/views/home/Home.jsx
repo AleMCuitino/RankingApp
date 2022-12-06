@@ -7,6 +7,7 @@ import FilterButtons from "../../components/filter-buttons/FilterButtons";
 import { ContainerApps } from "./HomeStyle";
 
 import CheckboxList from "../../components/filter-buttons/ButtonsList";
+import Carousel from "../../components/carousel/Carousel";
 
 export default function Home() {
   // New array with ordered apps from higher to lower ranking value.
@@ -58,6 +59,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
+      <Carousel/>
       <CheckboxList appTypes={allAppTypes} filterAppType={filterAppType} />
       <FilterButtons updateAppsList={updateAppsList} />
       <ContainerApps apps={appsList}>
