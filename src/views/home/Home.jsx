@@ -7,7 +7,7 @@ import FilterButtons from "../../components/filter-buttons/FilterButtons";
 import { ContainerApps } from "./HomeStyle";
 
 import CheckboxList from "../../components/filter-buttons/ButtonsList";
-import FilterTabs from "../../components/filter-tabs/FilterTabs";
+import ButtonsList from "../../components/filter-buttons/ButtonsList";
 
 export default function Home() {
   // New array with ordered apps from higher to lower ranking value.
@@ -28,6 +28,8 @@ export default function Home() {
       )
     ),
   ];
+
+  const searchWord = document.getElementById("searchByWord");
 
   //New array with all "Type" values and add "All" as a "Type" value.
   const allAppTypes = [...new Set(Apps.map((app) => app.type))];
@@ -56,10 +58,27 @@ export default function Home() {
     }
   };
 
+  const filterByName = (word) => {
+    if (word === "") {
+      setAppsList(currentListOrder);
+    } else {
+      const filteredResult = appsList.filter((app) =>
+        app.app_name.toLowerCase().includes(word)
+      );
+      console.log(filteredResult);
+      setAppsList(filteredResult);
+    }
+  };
+
   return (
     <>
       <Navbar />
-      <FilterTabs updateAppsList={updateAppsList} />
+      <input
+        type="text"
+        id="searchByWord"
+        placeholder="Buscar..."
+        onKeyUp={() => filterByName(searchWord.value)}
+      />
       <CheckboxList appTypes={allAppTypes} filterAppType={filterAppType} />
       <FilterButtons updateAppsList={updateAppsList} />
       <ContainerApps apps={appsList}>
