@@ -14,6 +14,20 @@ export default function Home() {
   const bestAppsList = Apps.filter((app) => app.rating >= 4).sort((a, b) =>
     a.rating > b.rating ? -1 : 1
   );
+  const intermediateAppsList = [
+    ...new Set(
+      Apps.filter((app) => app.rating > 2 && app.rating < 4).sort((a, b) =>
+        a.rating > b.rating ? -1 : 1
+      )
+    ),
+  ];
+  const worstAppsList = [
+    ...new Set(
+      Apps.filter((app) => app.rating <= 2).sort((a, b) =>
+        a.rating > b.rating ? 1 : -1
+      )
+    ),
+  ];
 
   const searchWord = document.getElementById("searchByWord");
 
@@ -35,24 +49,10 @@ export default function Home() {
       setCurrentListOrder(bestAppsList); // Estado 2 - Original Copy
     }
     if (order === "Intermedias") {
-      const intermediateAppsList = [
-        ...new Set(
-          Apps.filter((app) => app.rating > 2 && app.rating < 4).sort((a, b) =>
-            a.rating > b.rating ? -1 : 1
-          )
-        ),
-      ];
       setAppsList(intermediateAppsList); // Render
       setCurrentListOrder(intermediateAppsList); // Original Copy
     }
     if (order === "Peores") {
-      const worstAppsList = [
-        ...new Set(
-          Apps.filter((app) => app.rating <= 2).sort((a, b) =>
-            a.rating > b.rating ? 1 : -1
-          )
-        ),
-      ];
       setAppsList(worstAppsList); // Render
       setCurrentListOrder(worstAppsList); // Original Copy
     }
