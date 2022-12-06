@@ -1,12 +1,21 @@
 import React from "react";
 import { Rating } from "@mui/material";
 import { Box, ComentsContainer, Text, Datas } from "./ComentsListStyle";
+import Appp from "./Appp";
 
-function ComentsList() {
+function ComentsList({coments}) {
   return (
     <ComentsContainer>
       <h3>Comentarios</h3>
       <Box>
+        {coments.map(coment => (
+          <Text key={coment.id}>
+            <p>{coment.name}</p>
+
+          </Text>
+        ))}
+      </Box>
+      {/* <Box>
         <Datas>
           <Rating
             name="half-rating-read"
@@ -109,7 +118,7 @@ function ComentsList() {
             tempora adipisci facilis.
           </p>
         </Text>
-      </Box>
+      </Box> */}
     </ComentsContainer>
   );
 }

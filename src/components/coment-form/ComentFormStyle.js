@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { bgPrimary } from "../../variables/ColorVariables";
 
-export const FormContainer = styled.div`
+export const FormContainer = styled.form`
   
   width: 80vw;
   

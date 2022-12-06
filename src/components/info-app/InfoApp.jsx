@@ -25,18 +25,18 @@ import { FaArrowAltCircleLeft } from "react-icons/fa";
 
 function InfoApp() {
   const { id } = useParams();
-  const [coment, setComent] = useState([])
+  const [ coments, setComents ] = useState([])
 
-  function addComent(appTitle){
-    setComent([
-      ...coment,
+  function addComent(comentName){
+    setComents([
+      ...coments,
       {
         id: crypto.randomUUID(),
-        title: appTitle,
+        name: comentName,
         iscompleted: false
       }
     ])
-    console.log(id)
+    
   }
 
 
@@ -108,7 +108,7 @@ function InfoApp() {
             <ContainerText>{apps.app_description}</ContainerText>
             
           </ContainerInfoApp>
-          <ComentsList />
+          <ComentsList coments={coments}/>
           <ComentForm onAddComent={addComent}/>
         </MainContainer>
       ))}
