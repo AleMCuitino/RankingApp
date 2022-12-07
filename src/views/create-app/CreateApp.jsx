@@ -1,18 +1,15 @@
 import React from 'react'
 import Navbar from '../../components/navbar/Navbar';
 //import Footer from '../../components/footer/Footer'
-import AppForm from '../../components/app-form/AppForm';
+import Form from '../../components/app-form/Form';
 
-export default function SingleApp() {
+export default function CreateApp() {
     return (
         <>
             <Navbar />
             <h2>Agregar app</h2>
-            <AppForm />
-            {/* <ComentsList />
-            <ComentForm /> */}
-
-            {/* <Footer /> */}
+            <Form />
+            
         </>
     )
 }

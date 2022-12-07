@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import  {React, useState, useEffect} from "react"
 import {
   ContainerForm,
   ContainerImgForm,
@@ -9,7 +10,37 @@ import {
   ContainerAboutAppForm
 } from "./AppFormStyle";
 
+
+
+
+
+
+
 const Form = () => {
+
+  const [coments, setComents] = useState(() => {
+    const saveComents = window.localStorage.getItem("comentsData");
+    if (saveComents) {
+      return JSON.parse(saveComents);
+    } else {
+      return [];
+    }
+  });
+  
+  useEffect(() => {
+    window.localStorage.setItem("comentsData", JSON.stringify(coments));
+  }, [coments]);
+  
+  const addComent = (coment) => {
+    setComents([...coments, coment]);
+    
+  };
+
+
+
+
+
+
   const {
     register,
     formState: { errors },
@@ -17,7 +48,9 @@ const Form = () => {
   } = useForm();
 
   const onSubmit = (dataApp) => {
+    
     console.log(dataApp);
+    addComent(dataApp);    
   };
 
   return (
@@ -26,14 +59,17 @@ const Form = () => {
           <ContainerImgForm>
             <input 
               type="file" 
+              ref={register}
+              name="picture"
               {...register("picture", { required: true })}
             />
-            <AddImg>Add image</AddImg>
+            
           </ContainerImgForm>
           <ContainerNameAppForm>
             <input
               type="text"
               placeholder="App name"
+              name="name"
               {...register("name", { required: true })}
             />
             {errors.name?.type === "required" && <p>App name is required</p>}
@@ -50,6 +86,7 @@ const Form = () => {
             <input
               type="text"
               placeholder="About app"
+              name="description"
               {...register("dirección", { required: true })}
             />
           </ContainerAboutAppForm>
