@@ -1,17 +1,21 @@
 import { useForm } from "react-hook-form";
 import { React, useState, useEffect } from "react";
 import {
+  Container,
   ContainerForm,
   ContainerImgForm,
   ContainerNameAppForm,
   ContainerTypeAppForm,
+  ContainerDataForm,
+
   ContainerAboutAppForm,
-} from "./AppFormStyle";
+} from "./FormStyle";
 
 import { App, Icon, TextContainer } from "../../components/card/CardStyle";
 import { Rating } from "@mui/material";
 import { AiFillStar } from "react-icons/ai";
 import { Link } from "react-router-dom";
+ 
 
 const Form = () => {
   const [coments, setComents] = useState(() => {
@@ -38,6 +42,7 @@ const Form = () => {
   const {
     register,
     formState: { errors },
+    watch,
     handleSubmit,
   } = useForm();
 
@@ -47,8 +52,8 @@ const Form = () => {
   };
 
   return (
-    <ContainerForm>
-      <form onSubmit={handleSubmit(onSubmit)}>
+  <Container>
+    <ContainerForm onSubmit={handleSubmit(onSubmit)}>
         <ContainerImgForm>
           <input
             type="file"
@@ -67,13 +72,13 @@ const Form = () => {
           {errors.name?.type === "required" && <p>App name is required</p>}
         </ContainerNameAppForm>
         <ContainerTypeAppForm>
-          <label>Type</label>
-          <select {...register("type", { required: true })}>
-            <option value="mob">Mobile</option>
-            <option value="desk">Desktop</option>
-            <option value="web">Web</option>
-          </select>
-        </ContainerTypeAppForm>
+            <input type="checkbox" value="Mobile" {...register("type", { required: true })} />
+            <label>Desktop</label>
+            <input type="checkbox" value="Desktop" {...register("type", { required: true })} />
+            <label>Web</label>
+            <input type="checkbox" value="Web" {...register("type", { required: true })} />
+            <label>Mobile</label>
+          </ContainerTypeAppForm>
         <ContainerAboutAppForm>
           <input
             type="text"
@@ -85,7 +90,7 @@ const Form = () => {
         <input type="submit" value="cancel" />
         <input type="submit" value="send" />
 
-        </form>
+        
         {coments.length === 0 ? (
           <p>No Coments yet</p>
         ) : (
@@ -111,6 +116,7 @@ const Form = () => {
           })
         )}
     </ContainerForm>
+    </Container>
   );
 };
 

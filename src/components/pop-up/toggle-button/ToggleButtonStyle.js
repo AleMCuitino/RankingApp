@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { bgLight, bgPrimary, bgSecondary, secondary } from "../../../variables/ColorVariables";
 
 export const Label = styled.label`
   display: flex;
@@ -10,7 +11,8 @@ export const Label = styled.label`
 export const Switch = styled.div`
   width: 1.8rem;
   height: 0.8rem;
-  background: #b3b3b3;
+  ${bgLight};
+  border: 1px solid ${secondary};
   border-radius: 32px;
   position: relative;
   padding: 0.2rem;
@@ -24,7 +26,7 @@ export const Switch = styled.div`
     border-radius: 35px;
     top: 50%;
     left: 0.3rem; 
-    background: white;
+    ${bgSecondary};
     transform: translate(0, -50%);
 
   }
@@ -35,7 +37,7 @@ export const Input = styled.input`
   position: absolute;
   display: none;
   &:checked + ${Switch} {
-    background: green;
+    background: rgba(25, 109, 255, 0.48) ;
     &:before {
       transform: translate(0.7rem, -50%);
     }

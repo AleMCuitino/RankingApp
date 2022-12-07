@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-const dark = "#373737";
-const light = "#fff";
-const primary = "#2370e0";
-const secondary = "#184382";
-const footer= "#A0A1A4"
+export const dark = "#373737";
+export const light = "#fff";
+export const primary = "#2370e0";
+export const secondary = "#184382";
+export const footer= "#A0A1A4"
 
 export const txtDark = `"color: ${dark}`;
 export const txtLight = `color: ${light}`;
