@@ -1,21 +1,41 @@
 import React from "react";
 import ToggleButton from "./toggle-button/ToggleButton";
+import InputPopUp from "./input-popup/InputPopUp";
+import {
+  PopUpContainer,
+  FiltersContainer,
+  CloseButton,
+  Overlay,
+  Span,
+  ToggleButtonsTops,
+  ToggleButtonsType,
+} from "./PopUpStyle";
 
-function PopUp() {
+function PopUp({state, setState}) {
   return (
     <>
-    <div>
-    <ToggleButton text='10 Mejores'/>
-    <ToggleButton text='10 Peores'/>
-    </div>
-    <div>
-    <ToggleButton text='Móvil'/>
-    <ToggleButton text='Web'/>
-    <ToggleButton text='Escritorio'/>
-    </div>
-   
-    </>
-);
+    {state &&
+    <Overlay>
+      <PopUpContainer>
+        <InputPopUp/>
+        <CloseButton onClick={() => setState(false)}>X</CloseButton>
+        <Span>Filters</Span>
+        <FiltersContainer>
+          <ToggleButtonsTops>
+            <ToggleButton text="10 Top" />
+            <ToggleButton text="10 Worst" />
+          </ToggleButtonsTops>
+          <ToggleButtonsType>
+            <ToggleButton text="Mobile" />
+            <ToggleButton text="Web" />
+            <ToggleButton text="Desktop" />
+          </ToggleButtonsType>
+        </FiltersContainer>
+      </PopUpContainer>
+    </Overlay>
+  }
+  </>
+  );
 }
 
 export default PopUp;
