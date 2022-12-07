@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-const dark = "#373737";
-const light = "#fff";
-const primary = "#2370e0";
+export const dark = "#373737";
+export const light = "#fff";
+export const primary = "#2370e0";
 export const secondary = "#184382";
 
 export const txtDark = `"color: ${dark}`;

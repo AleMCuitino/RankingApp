@@ -2,15 +2,28 @@ import React from "react";
 import FilterButton from "./filter-button/FilterButton";
 import { FilterButtonsContainer } from "./FilterButtonsContainer";
 
-function FilterButtons() {
+function FilterButtons({ updateAppsList }) {
   return (
- 
-      <FilterButtonsContainer>
-        <FilterButton text="Mejores"/>
-        <FilterButton text="Intermedias"/>
-        <FilterButton text="Peores"/>
-      </FilterButtonsContainer>
-      
+    <FilterButtonsContainer>
+      <FilterButton
+        updateAppsList={updateAppsList}
+        text={"Best"}
+        value="Mejores"
+        name="filter"
+      />
+      <FilterButton
+        updateAppsList={updateAppsList}
+        text={"Intermediate"}
+        value="Intermedias"
+        name="filter"
+      />
+      <FilterButton
+        updateAppsList={updateAppsList}
+        text={"Worst"}
+        value="Peores"
+        name="filter"
+      />
+    </FilterButtonsContainer>
   );
 }
 
