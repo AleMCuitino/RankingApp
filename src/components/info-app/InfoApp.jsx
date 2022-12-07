@@ -16,15 +16,13 @@ import {
 } from "./InfoAppStyle";
 import { AiFillStar } from "react-icons/ai";
 import { HiOutlineTrash, HiOutlinePencilAlt } from "react-icons/hi";
-import { Rating, LinearProgress, useScrollTrigger } from "@mui/material";
+import { Rating, LinearProgress} from "@mui/material";
 import { Link, useParams } from "react-router-dom";
 import Apps from "../../data/app.json";
 import ComentsList from "../coments-list/ComentsList";
 import ComentForm from "../coment-form/ComentForm";
 import { FaArrowAltCircleLeft } from "react-icons/fa";
-import Appp from "../coments-list/Appp";
-import Tasks from "../coments-list/Tasks";
-import Header from "../coments-list/Header";
+
 
 function InfoApp() {
   // add coment CRUD

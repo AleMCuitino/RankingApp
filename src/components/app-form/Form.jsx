@@ -1,45 +1,39 @@
 import { useForm } from "react-hook-form";
-import  {React, useState, useEffect} from "react"
+import { React, useState, useEffect } from "react";
 import {
   ContainerForm,
   ContainerImgForm,
-  //ImgForm,
-  AddImg,
   ContainerNameAppForm,
   ContainerTypeAppForm,
-  ContainerAboutAppForm
+  ContainerAboutAppForm,
 } from "./AppFormStyle";
 
-
-
-
-
-
+import { App, Icon, TextContainer } from "../../components/card/CardStyle";
+import { Rating } from "@mui/material";
+import { AiFillStar } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Form = () => {
-
   const [coments, setComents] = useState(() => {
-    const saveComents = window.localStorage.getItem("comentsData");
+    const saveComents = window.localStorage.getItem("New Apps");
     if (saveComents) {
       return JSON.parse(saveComents);
     } else {
       return [];
     }
   });
-  
+
   useEffect(() => {
-    window.localStorage.setItem("comentsData", JSON.stringify(coments));
+    const savedapps = window.localStorage.setItem(
+      "New Apps",
+      JSON.stringify(coments)
+    );
+    console.log(savedapps);
   }, [coments]);
-  
+
   const addComent = (coment) => {
     setComents([...coments, coment]);
-    
   };
-
-
-
-
-
 
   const {
     register,
@@ -48,52 +42,75 @@ const Form = () => {
   } = useForm();
 
   const onSubmit = (dataApp) => {
-    
     console.log(dataApp);
-    addComent(dataApp);    
+    addComent(dataApp);
   };
 
   return (
-      <ContainerForm>
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <ContainerImgForm>
-            <input 
-              type="file" 
-              ref={register}
-              name="picture"
-              {...register("picture", { required: true })}
-            />
-            
-          </ContainerImgForm>
-          <ContainerNameAppForm>
-            <input
-              type="text"
-              placeholder="App name"
-              name="name"
-              {...register("name", { required: true })}
-            />
-            {errors.name?.type === "required" && <p>App name is required</p>}
-          </ContainerNameAppForm>
-          <ContainerTypeAppForm>
-            <label>Type</label>
-            <select {...register("type", { required: true })}>
-              <option value="mob">Mobile</option>
-              <option value="desk">Desktop</option>
-              <option value="web">Web</option>
-            </select>
-          </ContainerTypeAppForm>
-          <ContainerAboutAppForm>
-            <input
-              type="text"
-              placeholder="About app"
-              name="description"
-              {...register("dirección", { required: true })}
-            />
-          </ContainerAboutAppForm>
-          <input type="submit" value="cancel" />
-          <input type="submit" value="send" />
+    <ContainerForm>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <ContainerImgForm>
+          <input
+            type="file"
+            ref={register}
+            name="app_icon"
+            {...register("app_icon", { required: true })}
+          />
+        </ContainerImgForm>
+        <ContainerNameAppForm>
+          <input
+            type="text"
+            placeholder="App name"
+            name="name"
+            {...register("name", { required: true })}
+          />
+          {errors.name?.type === "required" && <p>App name is required</p>}
+        </ContainerNameAppForm>
+        <ContainerTypeAppForm>
+          <label>Type</label>
+          <select {...register("type", { required: true })}>
+            <option value="mob">Mobile</option>
+            <option value="desk">Desktop</option>
+            <option value="web">Web</option>
+          </select>
+        </ContainerTypeAppForm>
+        <ContainerAboutAppForm>
+          <input
+            type="text"
+            placeholder="About app"
+            name="description"
+            {...register("description", { required: true })}
+          />
+        </ContainerAboutAppForm>
+        <input type="submit" value="cancel" />
+        <input type="submit" value="send" />
+
         </form>
-      </ContainerForm>
+        {coments.length === 0 ? (
+          <p>No Coments yet</p>
+        ) : (
+          coments.map((app, index) => {
+            return(
+
+            <App key={index}>
+              <Link to={`/${app.id}`}>
+                <Icon src={app.app_icon} alt="descr" />
+              </Link>
+              <TextContainer>
+                <span>
+                  <b>{app.name}</b>
+                </span>
+                <span>{app.type}</span>
+                <div className="star">
+                  <AiFillStar style={{ color: "#2670E0" }} />
+                  <span></span>
+                </div>
+              </TextContainer>
+            </App>
+            )
+          })
+        )}
+    </ContainerForm>
   );
 };
 

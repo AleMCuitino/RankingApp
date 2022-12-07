@@ -55,6 +55,16 @@ export default function Home() {
     }
   };
 
+  // get object from localStorage
+  const [newApp, setNewApp] = useState(() => {
+    const saveApps = window.localStorage.getItem("New App");
+    if (saveApps) {
+      return JSON.parse(saveApps);
+    } else {
+      return [];
+    }
+  });
+
   return (
     <>
       <Navbar />
@@ -64,6 +74,7 @@ export default function Home() {
         {appsList.map((app) => {
           return <Card key={app.app_id} app={app} />;
         })}
+        
       </ContainerApps>
       <Footer/>
     </>
