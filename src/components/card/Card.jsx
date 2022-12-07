@@ -24,13 +24,13 @@ function Card({ app }) {
               {console.log(app.rating.valueOf())}
             </span>
           </div>
-          <Rating
+          {/* <Rating
             name="half-rating-read"
             defaultValue={parseFloat(app.rating)}
             style={{ color: "#2670E0" }}
             precision={1}
             readOnly
-          />
+          /> */}
         </TextContainer>
       </App>
     </>
