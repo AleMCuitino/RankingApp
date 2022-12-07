@@ -5,6 +5,7 @@ import Footer from "../../components/footer/Footer";
 import Apps from "../../data/app.json";
 import FilterButtons from "../../components/filter-buttons/FilterButtons";
 import { ContainerApps } from "./HomeStyle";
+import Carousel from "../../components/carousel/Carousel"
 
 import CheckboxList from "../../components/filter-buttons/ButtonsList";
 
@@ -58,6 +59,8 @@ export default function Home() {
   return (
     <>
       <Navbar />
+      <Carousel/>
+
       <CheckboxList appTypes={allAppTypes} filterAppType={filterAppType} />
       <FilterButtons updateAppsList={updateAppsList} />
       <ContainerApps apps={appsList}>
