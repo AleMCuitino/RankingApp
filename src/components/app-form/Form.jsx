@@ -31,6 +31,7 @@ const Form = () => {
   const {
     register,
     formState: { errors },
+    watch,
     handleSubmit,
   } = useForm();
 
@@ -41,8 +42,7 @@ const Form = () => {
 
   return (
   <Container>
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <ContainerForm>
+    <ContainerForm onSubmit={handleSubmit(onSubmit)}>
         <ContainerImgForm>
           <input
             type="file"
@@ -79,9 +79,8 @@ const Form = () => {
           </ContainerAboutAppForm>
           <input type="submit" value="cancel" />
           <input type="submit" value="send" />
-        </ContainerDataForm>
-      </ContainerForm>  
-    </form>
+        </ContainerDataForm> 
+    </ContainerForm>
   </Container>
 );
 };

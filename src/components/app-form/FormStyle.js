@@ -7,11 +7,13 @@ const media = {
 export const Container = styled.div`
     display: flex;
     justify-content: center;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
 `;
 
-export const ContainerForm = styled.div`
+export const ContainerForm = styled.form`
+    height: 90vh;
+    width: 90vw;
     ${media.desktop} {
             display: flex;
             flex-direction: row-reverse;
@@ -22,22 +24,17 @@ export const ContainerForm = styled.div`
 `;
 
 export const ContainerImgForm = styled.div`
-    display: flex;
-    flex-direction: column;
-    padding: 0vh 0vw 5vh 0vw;
-    input {
-        background: #C2C3C6;
-        border-radius: 12.5px;
-        border-style: none;
-        height: 25vh;
+    background: #C2C3C6;
+    border-radius: 12.5px;
+    margin: 0vh 0vw 5vh 0vw;
+    height: 40vh;
+    width: 80vw;
+    ${media.desktop} {
+        height: 40vh;
         width: 80vw;
-        ${media.desktop} {
-            height: 50vh;
-            width: 30vw;
-        }
-    }
-    
+    }    
 `;
+
 export const ContainerDataForm = styled.div`
 
 `;
