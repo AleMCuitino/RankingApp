@@ -1,23 +1,16 @@
 import { useForm } from "react-hook-form";
-import  {React, useState, useEffect} from "react"
+import { React, useState, useEffect } from "react";
 import {
+  Container,
   ContainerForm,
   ContainerImgForm,
-  //ImgForm,
-  AddImg,
+  ContainerDataForm,
   ContainerNameAppForm,
   ContainerTypeAppForm,
-  ContainerAboutAppForm
-} from "./AppFormStyle";
-
-
-
-
-
-
+  ContainerAboutAppForm,
+} from "./FormStyle";
 
 const Form = () => {
-
   const [coments, setComents] = useState(() => {
     const saveComents = window.localStorage.getItem("comentsData");
     if (saveComents) {
@@ -26,20 +19,14 @@ const Form = () => {
       return [];
     }
   });
-  
+
   useEffect(() => {
     window.localStorage.setItem("comentsData", JSON.stringify(coments));
   }, [coments]);
-  
+
   const addComent = (coment) => {
     setComents([...coments, coment]);
-    
   };
-
-
-
-
-
 
   const {
     register,
@@ -48,23 +35,23 @@ const Form = () => {
   } = useForm();
 
   const onSubmit = (dataApp) => {
-    
     console.log(dataApp);
-    addComent(dataApp);    
+    addComent(dataApp);
   };
 
   return (
+  <Container>
+    <form onSubmit={handleSubmit(onSubmit)}>
       <ContainerForm>
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <ContainerImgForm>
-            <input 
-              type="file" 
-              ref={register}
-              name="picture"
-              {...register("picture", { required: true })}
-            />
-            
-          </ContainerImgForm>
+        <ContainerImgForm>
+          <input
+            type="file"
+            ref={register}
+            name="picture"
+            {...register("picture", { required: true })}
+          />
+        </ContainerImgForm>
+        <ContainerDataForm>
           <ContainerNameAppForm>
             <input
               type="text"
@@ -75,12 +62,12 @@ const Form = () => {
             {errors.name?.type === "required" && <p>App name is required</p>}
           </ContainerNameAppForm>
           <ContainerTypeAppForm>
-            <label>Type</label>
-            <select {...register("type", { required: true })}>
-              <option value="mob">Mobile</option>
-              <option value="desk">Desktop</option>
-              <option value="web">Web</option>
-            </select>
+            <input type="checkbox" value="Mobile" {...register("type", { required: true })} />
+            <label>Desktop</label>
+            <input type="checkbox" value="Desktop" {...register("type", { required: true })} />
+            <label>Web</label>
+            <input type="checkbox" value="Web" {...register("type", { required: true })} />
+            <label>Mobile</label>
           </ContainerTypeAppForm>
           <ContainerAboutAppForm>
             <input
@@ -92,9 +79,11 @@ const Form = () => {
           </ContainerAboutAppForm>
           <input type="submit" value="cancel" />
           <input type="submit" value="send" />
-        </form>
-      </ContainerForm>
-  );
+        </ContainerDataForm>
+      </ContainerForm>  
+    </form>
+  </Container>
+);
 };
 
 export default Form;
