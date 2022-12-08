@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 import {React, useState} from "react";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import Form from "../../components/app-form/Form";
+=======
+import React from 'react';
+import Navbar from '../../components/navbar/Navbar';
+import Footer from '../../components/footer/Footer'
+import Form from '../../components/app-form/Form';
+>>>>>>> 6a1b4886c2c68c7c53034cdb02f7fb798a81aa75
 
 export default function CreateApp() {
   const [baseImage, setBaseImage] = useState("");

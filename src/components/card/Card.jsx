@@ -1,5 +1,4 @@
 import { React, useState } from "react";
-
 import { App, Icon, TextContainer } from "./CardStyle";
 import { Rating } from "@mui/material";
 import { AiFillStar } from "react-icons/ai";
