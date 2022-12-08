@@ -21,6 +21,7 @@ export const Icon = styled.img`
 
 export const TextContainer = styled.div`
   display: flex;
+  width: 100vw;
   flex-direction: column;
   justify-content: space-around;
   padding: 1rem;
