@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from "../../assets/images/ranking-app-logo.svg";
+import logo from "../../assets/images/ranking-app-logo-b.svg";
 import SearchButton from '../searchButton/SearchButton';
 import { Header } from './NavbarStyle';
 
