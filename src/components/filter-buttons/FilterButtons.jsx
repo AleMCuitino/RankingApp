@@ -5,13 +5,24 @@ import { FilterButtonsContainer } from "./FilterButtonsContainer";
 function FilterButtons({ updateAppsList }) {
   return (
     <FilterButtonsContainer>
-      <FilterButton state="pressed" updateAppsList={updateAppsList} text={"Mejores"} />
       <FilterButton
-        state
         updateAppsList={updateAppsList}
-        text={"Intermedias"}
+        text={"Best"}
+        value="Mejores"
+        name="filter"
       />
-      <FilterButton state updateAppsList={updateAppsList} text={"Peores"} />
+      <FilterButton
+        updateAppsList={updateAppsList}
+        text={"Intermediate"}
+        value="Intermedias"
+        name="filter"
+      />
+      <FilterButton
+        updateAppsList={updateAppsList}
+        text={"Worst"}
+        value="Peores"
+        name="filter"
+      />
     </FilterButtonsContainer>
   );
 }

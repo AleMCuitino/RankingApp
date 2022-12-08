@@ -5,16 +5,17 @@ export const Header = styled.header`
   ${bgDark};
   display: flex;
   flex-direction: row;
-  height: 3rem;
+  height: 10vh;
   justify-content: space-between;
   /* padding: 2vw 2vw; */
   align-items: center;
-  margin-bottom: 4vw;
+  margin-bottom: 5vw;
 
   .logo {
-    width: 10vw;
+    width: 15vw;
     display: flex;
     align-items: center;
+    margin-left: 2.5vw;
     
   }
 
@@ -22,3 +23,4 @@ export const Header = styled.header`
     width: 80%;
   }
 `;
+

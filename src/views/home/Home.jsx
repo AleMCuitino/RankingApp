@@ -1,19 +1,39 @@
 import Card from "../../components/card/Card";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import Apps from "../../data/app.json";
 import FilterButtons from "../../components/filter-buttons/FilterButtons";
 import { ContainerApps } from "./HomeStyle";
 import Carousel from "../../components/carousel/Carousel"
+import { ContainerApps, IconAddApp } from "./HomeStyle";
+import { FaPlusCircle } from "react-icons/fa";
 
 import CheckboxList from "../../components/filter-buttons/ButtonsList";
+import ButtonsList from "../../components/filter-buttons/ButtonsList";
 
 export default function Home() {
   // New array with ordered apps from higher to lower ranking value.
   const bestAppsList = Apps.filter((app) => app.rating >= 4).sort((a, b) =>
     a.rating > b.rating ? -1 : 1
   );
+  const intermediateAppsList = [
+    ...new Set(
+      Apps.filter((app) => app.rating > 2 && app.rating < 4).sort((a, b) =>
+        a.rating > b.rating ? -1 : 1
+      )
+    ),
+  ];
+  const worstAppsList = [
+    ...new Set(
+      Apps.filter((app) => app.rating <= 2).sort((a, b) =>
+        a.rating > b.rating ? 1 : -1
+      )
+    ),
+  ];
+
+  const searchWord = document.getElementById("searchByWord");
 
   //New array with all "Type" values and add "All" as a "Type" value.
   const allAppTypes = [...new Set(Apps.map((app) => app.type))];
@@ -33,26 +53,24 @@ export default function Home() {
       setCurrentListOrder(bestAppsList); // Estado 2 - Original Copy
     }
     if (order === "Intermedias") {
-      const intermediateAppsList = [
-        ...new Set(
-          Apps.filter((app) => app.rating > 2 && app.rating < 4).sort((a, b) =>
-            a.rating > b.rating ? -1 : 1
-          )
-        ),
-      ];
       setAppsList(intermediateAppsList); // Render
       setCurrentListOrder(intermediateAppsList); // Original Copy
     }
     if (order === "Peores") {
-      const worstAppsList = [
-        ...new Set(
-          Apps.filter((app) => app.rating <= 2).sort((a, b) =>
-            a.rating > b.rating ? 1 : -1
-          )
-        ),
-      ];
       setAppsList(worstAppsList); // Render
       setCurrentListOrder(worstAppsList); // Original Copy
+    }
+  };
+
+  const filterByName = (word) => {
+    if (word === "") {
+      setAppsList(currentListOrder);
+    } else {
+      const filteredResult = appsList.filter((app) =>
+        app.app_name.toLowerCase().includes(word)
+      );
+      console.log(filteredResult);
+      setAppsList(filteredResult);
     }
   };
 
@@ -60,7 +78,12 @@ export default function Home() {
     <>
       <Navbar />
       <Carousel bestAppsList={bestAppsList}/>
-
+      <input
+        type="text"
+        id="searchByWord"
+        placeholder="Buscar..."
+        onKeyUp={() => filterByName(searchWord.value)}
+      />
       <CheckboxList appTypes={allAppTypes} filterAppType={filterAppType} />
       <FilterButtons updateAppsList={updateAppsList} />
       <ContainerApps apps={appsList}>
@@ -68,6 +91,12 @@ export default function Home() {
           return <Card key={app.app_id} app={app} />;
         })}
       </ContainerApps>
+      <IconAddApp>
+                <Link to="/createapp">
+                    <FaPlusCircle style={{ color: "#2370e0" }} />
+                </Link>
+            </IconAddApp>
+      <Footer/>
     </>
   );
 }

@@ -1,11 +1,20 @@
 import styled from "styled-components";
-import { bgLight } from "../../variables/ColorVariables";
+import { bgLight, txtLight } from "../../variables/ColorVariables";
+import { FaSearch } from "react-icons/fa";
 
 export const Button = styled.button`
-  ${bgLight};
   border: none;
-  padding: 0.2rem 0.4rem;
-  border-radius: 1rem;
-  height: 2rem;
+  
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
 `;
+ export const Icon = styled(FaSearch)`
+font-size:1.2rem;
+${txtLight};
+
+
+ 
+ `;
