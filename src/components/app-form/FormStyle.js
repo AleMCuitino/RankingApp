@@ -1,30 +1,39 @@
 import styled from "styled-components";
 
 const media = {
-    desktop: `@media(min-width: 900px)`,
+    desktop: `@media(max-width: 900px)`,
 };
 
 export const Container = styled.div`
+margin: 0;
+padding-left: 2vw;
     display: flex;
+    flex-direction: column ;
     justify-content: center;
     height: 100vh;
     width: 100vw;
+
+    .app{
+        width: 6rem;
+        height: 6rem;
+    }
+        
 `;
 
 export const ContainerForm = styled.form`
-    height: 90vh;
-    width: 90vw;
+    /* height: 90vh;
+    width: 90vw; */
     ${media.desktop} {
-            display: flex;
+            /* display: flex;
             flex-direction: row-reverse;
             justify-content: space-around;
             gap: 5vw;
-            width: 10vw;
+            width: 10vw; */
         }
 `;
 
 export const ContainerImgForm = styled.div`
-    background: #C2C3C6;
+    /* background: #C2C3C6; */
     border-radius: 12.5px;
     margin: 0vh 0vw 5vh 0vw;
     height: 40vh;

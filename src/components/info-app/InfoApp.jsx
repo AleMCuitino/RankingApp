@@ -37,7 +37,8 @@ function InfoApp() {
   });
 
   useEffect(() => {
-    window.localStorage.setItem("comentsData", JSON.stringify(coments));
+   const savedcoment = window.localStorage.setItem("comentsData", JSON.stringify(coments));
+   console.log(savedcoment)
   }, [coments]);
 
   // inserción de datos
@@ -139,16 +140,7 @@ function InfoApp() {
           <ComentForm addComent={addComent}
             editComent={editComent}
             editData={editData} />
-          {/* <Tasks
-            coments={coments}
-            setEditData={setEditData}
-            deleteComent={deleteComent}
-          />
-          <Header
-            addComent={addComent}
-            editComent={editComent}
-            editData={editData}
-          /> */}
+          
         </MainContainer>
       ))}
     </>

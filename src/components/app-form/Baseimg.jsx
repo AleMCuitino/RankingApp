@@ -14,7 +14,9 @@ import { App, Icon, TextContainer } from "../../components/card/CardStyle";
 import { Rating } from "@mui/material";
 import { AiFillStar } from "react-icons/ai";
 
-const Form = () => {
+function Baseimg() {
+
+
   //Local Storage
   const [coments, setComents] = useState(() => {
     const saveComents = window.localStorage.getItem("New Apps");
@@ -181,4 +183,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default Baseimg
