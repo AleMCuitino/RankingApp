@@ -59,7 +59,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <Carousel/>
+      <Carousel bestAppsList={bestAppsList}/>
 
       <CheckboxList appTypes={allAppTypes} filterAppType={filterAppType} />
       <FilterButtons updateAppsList={updateAppsList} />

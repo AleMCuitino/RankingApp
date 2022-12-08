@@ -3,10 +3,18 @@ import { Swiper, } from 'swiper/react';
 
 export const SwiperStyle = styled(Swiper)`
  .img-carousel{
-    height:20vh;
+    height:17vh;
     width:auto;
-    object-fit:cover
+    margin-left:2%;
+    margin-right:2%;
+    display:inline-block
+
 }
+@media (min-width: 768px) {
+    
+    .img-carousel{
+        height:30vh;
+  };}
 `
 
 
