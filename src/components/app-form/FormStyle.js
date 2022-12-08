@@ -1,8 +1,14 @@
 import styled from "styled-components";
+import { light, primary } from "../../variables/ColorVariables";
 
 const media = {
     desktop: `@media(min-width: 900px)`,
 };
+
+export const Title = styled.h2`
+    padding: 5vh 0vw 2.5vh 5vw;
+
+`;
 
 export const Container = styled.div`
     display: flex;
@@ -21,6 +27,9 @@ export const ContainerForm = styled.form`
             gap: 5vw;
             width: 10vw;
         }
+    p{
+        color: ${primary};
+    }    
 `;
 
 export const ContainerImgForm = styled.div`
@@ -73,4 +82,39 @@ input {
             width: 40vw;
         }
     }
+`;
+
+export const Buttons = styled.div`
+display: flex;
+justify-content: space-evenly;
+`;
+
+export const ButtonCancel = styled.div`
+input {
+        background: transparent;
+        border-radius: 25px;
+        border-style:line;
+        border-color: ${primary};
+        outline: none;
+        color: ${primary};
+        font-size: 1rem;
+        font-weight:500;
+        height: 32px;
+        width: 96px;
+    }
+
+`;
+
+export const ButtonSubmit = styled.div`
+input {
+        background: ${primary};
+        border-radius: 25px;
+        border-style: none;
+        color: ${light};
+        font-size: 1rem;
+        font-weight:500;
+        height: 32px;
+        width: 96px;
+    }
+
 `;

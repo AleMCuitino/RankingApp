@@ -1,6 +1,8 @@
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 import { React, useState, useEffect } from "react";
 import {
+  Title,
   Container,
   ContainerForm,
   ContainerImgForm,
@@ -8,6 +10,9 @@ import {
   ContainerNameAppForm,
   ContainerTypeAppForm,
   ContainerAboutAppForm,
+  Buttons,
+  ButtonSubmit,
+  ButtonCancel,
 } from "./FormStyle";
 
 const Form = () => {
@@ -41,6 +46,8 @@ const Form = () => {
   };
 
   return (
+  <div>
+  <Title>Add an app to our page</Title>
   <Container>
     <ContainerForm onSubmit={handleSubmit(onSubmit)}>
         <ContainerImgForm>
@@ -50,6 +57,7 @@ const Form = () => {
             name="picture"
             {...register("picture", { required: true })}
           />
+          {errors.name?.type === "required" && <p>*App icon image is required</p>}
         </ContainerImgForm>
         <ContainerDataForm>
           <ContainerNameAppForm>
@@ -59,7 +67,7 @@ const Form = () => {
               name="name"
               {...register("name", { required: true })}
             />
-            {errors.name?.type === "required" && <p>App name is required</p>}
+            {errors.name?.type === "required" && <p>*App name is required</p>}
           </ContainerNameAppForm>
           <ContainerTypeAppForm>
             <input type="checkbox" value="Mobile" {...register("type", { required: true })} />
@@ -76,12 +84,22 @@ const Form = () => {
               name="description"
               {...register("dirección", { required: true })}
             />
+            {errors.name?.type === "required" && <p>*App description is required</p>}
           </ContainerAboutAppForm>
-          <input type="submit" value="cancel" />
-          <input type="submit" value="send" />
+          <Buttons>
+          <ButtonCancel>
+            <Link to="/">
+              <input type="submit" value="Cancel" />   
+            </Link>
+          </ButtonCancel> 
+          <ButtonSubmit>
+            <input type="submit" value="Add app" />
+          </ButtonSubmit>
+          </Buttons>
         </ContainerDataForm> 
     </ContainerForm>
   </Container>
+  </div>  
 );
 };
 

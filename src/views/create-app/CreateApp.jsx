@@ -7,7 +7,6 @@ export default function CreateApp() {
     return (
         <>
             <Navbar />
-            <h2>Agregar app</h2>
             <Form />
             <Footer />
             
