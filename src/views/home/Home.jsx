@@ -5,8 +5,7 @@ import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import Apps from "../../data/app.json";
 import FilterButtons from "../../components/filter-buttons/FilterButtons";
-import { ContainerApps } from "./HomeStyle";
-import Carousel from "../../components/carousel/Carousel"
+import Carousel from "../../components/carousel/carousel"
 import { ContainerApps, IconAddApp } from "./HomeStyle";
 import { FaPlusCircle } from "react-icons/fa";
 

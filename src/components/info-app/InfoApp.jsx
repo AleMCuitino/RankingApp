@@ -13,6 +13,7 @@ import {
   IconReturn,
   CoverSingle,
   MainContainer,
+  CompareApps
 } from "./InfoAppStyle";
 import { AiFillStar } from "react-icons/ai";
 import { HiOutlineTrash, HiOutlinePencilAlt } from "react-icons/hi";
@@ -108,6 +109,7 @@ function InfoApp() {
               <HiOutlinePencilAlt style={{ color: "#2370e0" }} />
             </IconEditApp>
           </ContainerDataApp>
+          <Link to={{pathname:`/compareapps:${id}`}}><CompareApps>Compare with another</CompareApps></Link>
 
           <ContainerInfoApp>
             <RatingInfoApp>

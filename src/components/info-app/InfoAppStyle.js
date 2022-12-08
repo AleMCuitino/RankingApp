@@ -71,6 +71,10 @@ export const IconEditApp = styled.div`
   padding-top: 1.8vw;
 `;
 
+export const CompareApps = styled.button`
+
+`;
+
 export const ClasificationApp = styled.div`
   display: flex;
   align-items: center;
