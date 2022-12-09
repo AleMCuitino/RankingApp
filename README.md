@@ -1,70 +1,105 @@
-# Getting Started with Create React App
+# AppRank
+![logo-AppRank](./src/assets/images/ranking-app-logo.svg)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Table of Contents
+- [AppRank](#apprank)
+  - [Table of Contents](#table-of-contents)
+  - [General Information](#general-information)
+  - [Screenshots](#screenshots)
+  - [Tecnologies](#tecnologies)
+  - [Deployment](#deployment)
+  - [Support](#support)
+  - [Collaboration](#collaboration)
+  - [Authors](#authors)
+  - [FAQs](#faqs)
 
-In the project directory, you can run:
+***
+## General Information
+AppRank is the UX/UI International comission app designed to rank applications.  
 
-### `npm start`
+Users may find, review and rank Apps.
+ 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+***
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Screenshots
 
-### `npm test`
+![screenshot0****](./src/assets/images/screenshoot01.png)
+***
+![screenshot0****](./src/assets/images/screenshoot02.png)
+***
+![screenshot0****](./src/assets/images/screenshoot03.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+***
+![screenshot0****](./src/assets/images/screenshoot04.png)
 
-### `npm run build`
+***
+## Tecnologies
+The project was developed with the following technologies
+* HTML5
+* JavaScript
+* Node Js
+* React
+* react-router DOM
+* react icons
+* Styled-components
+* Npm
+* MUI materials
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+***
+## Deployment
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ ``` 
+git clone https://netlify.com/
+```
 
-### `npm run eject`
+***
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Support
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To handle any enquiries contact
+>andres.patino@factoriaf5.org
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+***
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Collaboration
+The project is open to users contributions. If you may contribute you should contact:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+> andres.patino@factoriaf5.org
+***
+## Authors
 
-### Code Splitting
+[Alejandra Morales Cuitiño](https://github.com/AleMCuitino)  
+[Albert Arqués](https://github.com/albertarques)   
+[Alejandra Jaramillo](https://github.com/AlexandraJaramillo)  
+[Eberth Isaac Castro](https://github.com/EberthCastro)  
+[Isabel Castro](https://github.com/Behbiz)   
+[federico gatti](https://github.com/fcegatti)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+***
+## FAQs
 
-### Making a Progressive Web App
+1. **Can I rank Apps for all devices?**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Apps can be ranked either for Windows, Android or Mac iOS
 
-### Advanced Configuration
+2. **Can I rank my own App?**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Anyone can upload your App to our database and every user will be able to rank it. In the future you will be able to log-in and manage your app 
 
-### Deployment
+3. **
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+ ``` 
+ 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
