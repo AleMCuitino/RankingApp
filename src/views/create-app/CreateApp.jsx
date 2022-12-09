@@ -1,14 +1,9 @@
-<<<<<<< HEAD
 import {React, useState} from "react";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import Form from "../../components/app-form/Form";
-=======
-import React from 'react';
-import Navbar from '../../components/navbar/Navbar';
-import Footer from '../../components/footer/Footer'
-import Form from '../../components/app-form/Form';
->>>>>>> 6a1b4886c2c68c7c53034cdb02f7fb798a81aa75
+import NewApps from "../../components/app-form/NewApps";
+import Baseimg from "../../components/app-form/Baseimg";
 
 export default function CreateApp() {
   const [baseImage, setBaseImage] = useState("");
@@ -37,9 +32,8 @@ export default function CreateApp() {
 
   return (
     <>
-      <Navbar />
-      <h2>Agregar app</h2>
-      <Form />
+      <Navbar />      
+      <Baseimg />
             
       <div>
         {/* <input type="file" 

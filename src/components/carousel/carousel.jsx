@@ -9,7 +9,7 @@ import { SwiperStyle} from './CarouselStyle';
 
 
 
-function carousel({bestAppsList}) {
+function Carousel({bestAppsList}) {
   return (
     <>
       <SwiperStyle
@@ -43,4 +43,4 @@ function carousel({bestAppsList}) {
   )
 }
 
-export default carousel
+export default Carousel

@@ -13,13 +13,14 @@ import {
 import { App, Icon, TextContainer } from "../../components/card/CardStyle";
 import { Rating } from "@mui/material";
 import { AiFillStar } from "react-icons/ai";
+import NewApps from "./NewApps";
 
 function Baseimg() {
-
-
-  //Local Storage
+  //
+  // add coment CRUD
+  const [editData, setEditData] = useState(null);
   const [coments, setComents] = useState(() => {
-    const saveComents = window.localStorage.getItem("New Apps");
+    const saveComents = window.localStorage.getItem("comentsData");
     if (saveComents) {
       return JSON.parse(saveComents);
     } else {
@@ -28,17 +29,26 @@ function Baseimg() {
   });
 
   useEffect(() => {
-    window.localStorage.setItem("New Apps", JSON.stringify(coments));
-    // console.log(savedapps);
+    const savedcoment = window.localStorage.setItem(
+      "comentsData",
+      JSON.stringify(coments)
+    );
+    console.log(savedcoment);
   }, [coments]);
 
+  // inserción de datos
   const addComent = (coment) => {
     setComents([...coments, coment]);
   };
 
-  //End Local Storage
+  // editar un comentario
+  const editComent = (coment) => {
+    const newComents = coments.map((el) => (el.id === coment.id ? coment : el));
+    setComents(newComents);
+    setEditData(null);
+  };
 
-  // delete a app
+  // Eliminar un comentario
   const deleteComent = (id) => {
     const isDelete = window.confirm(
       `¿Deseas eliminar el registro con id: ${id}?`
@@ -50,24 +60,58 @@ function Baseimg() {
     }
   };
 
-  //End Delette App
+  //
 
-  //Form of useForm React
+  const [formData, setFormData] = useState({
+    image: "",
+    coment: "",
+    type: "",
+    description: "",
+    id: null,
+  });
 
-  const {
-    register,
-    formState: { errors },
-    watch,
-    handleSubmit,
-  } = useForm();
+  useEffect(() => {
+    if (editData !== null) {
+      setFormData(editData);
+    } else {
+      setFormData({
+        image: "",
+        coment: "",
+        type: "",
+        description: "",
+        id: null,
+      });
+    }
+  }, [editData]);
 
-  const onSubmit = (dataApp) => {
-    // console.log(dataApp);
+  function handleSubmit(e) {
+    e.preventDefault(); // Evitar que se recarge la página
 
-    addComent(dataApp);
-  };
+    if (formData.coment !== "" && formData.description !== "") {
+      if (editData !== null) {
+        editComent(formData);
+      } else {
+        formData.id = crypto.randomUUID();
+        addComent(formData);
+        setFormData({
+          image: "",
+          coment: "",
+          type: "",
+          description: "",
+          id: null,
+        });
+      }
+    } else {
+      alert("Por favor agrega tu nombre y una descripción.");
+    }
+  }
 
-  //End useForm
+  function handleChange(e) {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  }
 
   // image base 64 option 1
   const [baseImage, setBaseImage] = useState("");
@@ -77,6 +121,7 @@ function Baseimg() {
     const base64 = await convertBase64(file);
     console.log(base64);
     setBaseImage(base64);
+    handleChange(base64);
   };
 
   const convertBase64 = (file) => {
@@ -98,44 +143,49 @@ function Baseimg() {
 
   return (
     <Container>
-      <ContainerForm onSubmit={handleSubmit(onSubmit)}>
-        <ContainerImgForm  >
-        <input type="file" 
-        
-        onChange={(e => {
-            uploadImage(e)
-        })} 
-        ref={register}
-            name="picture"
-            {...register("picture", { required: false })}/>
+      <h2>Agregar App</h2>
+      <ContainerForm onSubmit={handleSubmit}>
+        <ContainerImgForm>
+          <input
+            type="file"
+            name="image"
+            value={formData.image}
+            // onChange={handleChange}
+            onChange={handleChange}
+          />
           <img src={baseImage} alt="" className="app" />
         </ContainerImgForm>
         <ContainerNameAppForm>
           <input
             type="text"
             placeholder="App name"
-            name="name"
-            {...register("name", { required: true })}
+            name="coment"
+            value={formData.coment}
+            onChange={handleChange}
           />
-          {errors.name?.type === "required" && <p>App name is required</p>}
+          {/* {errors.name?.type === "required" && <p>App name is required</p>} */}
         </ContainerNameAppForm>
         <ContainerTypeAppForm>
           <input
             type="checkbox"
-            value="Mobile"
-            {...register("type", { required: true })}
+            name="type"
+            value={formData.type}
+            onChange={handleChange}
+            // {...register("type", { required: true })}
           />
           <label>Desktop</label>
           <input
             type="checkbox"
-            value="Desktop"
-            {...register("type", { required: true })}
+            name="type"
+            // value={formData.type}
+            // {...register("type", { required: true })}
           />
           <label>Web</label>
           <input
             type="checkbox"
-            value="Web"
-            {...register("type", { required: true })}
+            name="type"
+            // value={formData.type}
+            // {...register("type", { required: true })}
           />
           <label>Mobile</label>
         </ContainerTypeAppForm>
@@ -144,43 +194,30 @@ function Baseimg() {
             type="text"
             placeholder="About app"
             name="description"
-            {...register("description", { required: true })}
+            value={formData.description}
+            onChange={handleChange}
+
+            // {...register("description", { required: true })}
           />
         </ContainerAboutAppForm>
-        <input type="submit" value="reset" />
-        <input
-          type="submit"
-          value="send"
-          // onChange={(e) => { uploadImage(e) }}
-        />
+        <div className="contbutton">
+          <input type="submit" value="reset" className="button" />
+          <input
+            type="submit"
+            value="send"
+            className="button"
+            // onChange={(e) => { uploadImage(e) }}
+          />
+        </div>
       </ContainerForm>
-      {coments.map((e, index) => {
-        return (
-          <App key={index}>
-            {/* <Link to={`/${app.id}`}> */}
-            <Icon src={baseImage} alt="descr" />
-            {/* </Link> */}
-            <TextContainer>
-              <span>
-                <b>{e.name}</b>
-              </span>
-              <span>{e.type[0]}</span>
-              <div className="star">
-                <AiFillStar style={{ color: "#2670E0" }} />
-                <span>4,5</span>
-              </div>
-              <button
-                className="btn btn-outline-danger mx-1"
-                onClick={() => deleteComent(e.id)}
-              >
-                Eliminar
-              </button>
-            </TextContainer>
-          </App>
-        );
-      })}
+      <NewApps
+        baseImage={baseImage}
+        coments={coments}
+        deleteComent={deleteComent}
+        setEditData={setEditData}
+      />
     </Container>
   );
-};
+}
 
-export default Baseimg
+export default Baseimg;
