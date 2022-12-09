@@ -48,8 +48,6 @@ export default function Home() {
         tabsFilterOrder={tabsFilterOrder}
         appTypes={allAppTypes}
       />
-      <Carousel bestAppsList={bestAppsList} />
-
       <FilterTabs
         bestAppsList={bestAppsList}
         intermediateAppsList={intermediateAppsList}
@@ -66,7 +64,6 @@ export default function Home() {
         {renderAppsList.map((app) => {
           return <Card key={app.app_id} app={app} />;
         })}
-        
       </ContainerApps>
       <IconAddApp>
         <Link to="/createapp">
