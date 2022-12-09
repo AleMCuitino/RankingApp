@@ -8,8 +8,8 @@ export const Container = styled.div`
 export const App = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin: 2rem;
-  width: 22rem;  
+  margin: 1rem;
+  width: 22rem;
 `;
 
 export const Icon = styled.img`
@@ -21,17 +21,15 @@ export const Icon = styled.img`
 
 export const TextContainer = styled.div`
   display: flex;
-  width: 100vw;
+  width: 12rem;
   flex-direction: column;
   justify-content: space-around;
-  padding: 1rem;
+  padding: 0 0 0 1rem;
   /* filter: hue-rotate(20deg) brightness(200%); */
   /* filter: hue-rotate(180deg) brightness(70%); */
 
-  .star{
+  .star {
     display: flex;
     align-items: center;
-    
-    
   }
 `;

@@ -37,7 +37,7 @@ function ComentForm({ addComent, editComent, editData }) {
         });
       }
     } else {
-      alert("Por favor agrega tu nombre y una descripción.");
+      alert("Please insert your name and a description.");
     }
   }
 
@@ -50,7 +50,7 @@ function ComentForm({ addComent, editComent, editData }) {
 
   return (
     <FormContainer onSubmit={handleSubmit}>
-      <p>Add Coment</p>
+      <p>Add Comment</p>
       <FormInput Height="auto">
         {/* <label for="name">Name</label> */}
         <Input
