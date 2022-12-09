@@ -171,7 +171,7 @@ const Form = () => {
                 className="btn btn-outline-danger mx-1"
                 onClick={() => deleteComent(e.id)}
               >
-                Eliminar
+                Delete
               </button>
             </TextContainer>
           </App>
