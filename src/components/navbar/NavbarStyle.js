@@ -3,24 +3,23 @@ import { bgDark, bgLight } from "../../variables/ColorVariables";
 
 export const Header = styled.header`
   ${bgDark};
+  background-color: rgb(55, 55, 55);
   display: flex;
   flex-direction: row;
-  height: 10vh;
+  -moz-box-pack: justify;
   justify-content: space-between;
-  /* padding: 2vw 2vw; */
+  -moz-box-align: center;
   align-items: center;
-  margin-bottom: 5vw;
+  height: 3rem;
 
   .logo {
-    width: 15vw;
     display: flex;
+    -moz-box-align: center;
     align-items: center;
-    margin-left: 2.5vw;
-    
   }
 
   img {
-    width: 80%;
+    height: 2rem;
+    margin: 0.5rem;
   }
 `;
-

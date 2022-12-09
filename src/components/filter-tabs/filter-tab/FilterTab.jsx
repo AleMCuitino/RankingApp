@@ -1,7 +1,7 @@
 import React from "react";
-import { FilterButtonStyled } from "./FilterButtonStyle";
+import { FilterTabStyled } from "./FilterTabStyled";
 
-function FilterButton({
+function FilterTab({
   text,
   updateAppsList,
   value,
@@ -10,7 +10,7 @@ function FilterButton({
   defaultChecked,
 }) {
   return (
-    <FilterButtonStyled
+    <FilterTabStyled
       onClick={(e) =>
         updateAppsList(e.target.value).setActiveButton(e.target.value)
       }
@@ -20,8 +20,8 @@ function FilterButton({
       filter={filter}
     >
       {text}
-    </FilterButtonStyled>
+    </FilterTabStyled>
   );
 }
 
-export default FilterButton;
+export default FilterTab;
