@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { bgPrimary, txtLight } from "../../variables/ColorVariables";
 
 const media = {
   mobile: `@media(max-width: 900px)`,
@@ -69,6 +70,27 @@ export const IconEditApp = styled.div`
   display: flex;
   justify-content: space-between;
   padding-top: 1.8vw;
+`;
+
+export const CompareAppsContainer = styled.div`
+  width: 100%;
+  height: 5%;
+  display:flex;
+  justify-content: flex-end;
+  padding-right:13rem;
+
+`;
+
+export const CompareApps = styled.button`
+  font-size: 1rem;
+  border: none;
+    padding: 0.2rem 1rem;
+    border-radius: 0.8rem;
+    height: 2rem;
+    width: 12rem;
+    ${bgPrimary};
+    ${txtLight};
+
 `;
 
 export const ClasificationApp = styled.div`
