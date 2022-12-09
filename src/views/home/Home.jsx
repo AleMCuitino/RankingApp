@@ -48,6 +48,8 @@ export default function Home() {
         tabsFilterOrder={tabsFilterOrder}
         appTypes={allAppTypes}
       />
+      <Carousel bestAppsList={bestAppsList} />
+
       <FilterTabs
         bestAppsList={bestAppsList}
         intermediateAppsList={intermediateAppsList}
