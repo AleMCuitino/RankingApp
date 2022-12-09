@@ -1,10 +1,11 @@
 import React from 'react';
-import PopUp from '../../components/pop-up/PopUp';
+import Navbar from '../../components/navbar/Navbar';
 
 function SearchResult() {
+
   return (
     <>
-    <PopUp/>
+    <Navbar/>
     </>
   )
 }

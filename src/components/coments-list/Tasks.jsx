@@ -1,9 +1,13 @@
 import React from "react";
 import { Rating } from "@mui/material";
-import { Box, ComentsContainer, Text, Datas } from "./ComentsListStyle";
-import Appp from "./Appp";
+import {
+  Box,
+  ComentsContainer,
+  Text,
+  Datas,
+} from "../coments-list/ComentsListStyle";
 
-function ComentsList({ coments, setEditData, deleteComent }) {
+function Tasks({ coments, setEditData, deleteComent }) {
   return (
     <>
     {coments.length === 0 ? (
@@ -48,4 +52,4 @@ function ComentsList({ coments, setEditData, deleteComent }) {
   );
 }
 
-export default ComentsList;
+export default Tasks;
