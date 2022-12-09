@@ -61,12 +61,10 @@ export default function Home() {
         secondDataOrder={secondDataOrder}
         setSecondDataOrder={setSecondDataOrder}
       />
-      <Carousel bestAppsList={bestAppsList} />
       <ContainerApps apps={renderAppsList}>
         {renderAppsList.map((app) => {
           return <Card key={app.app_id} app={app} />;
         })}
-        
       </ContainerApps>
       <IconAddApp>
         <Link to="/createapp">
