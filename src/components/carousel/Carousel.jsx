@@ -26,8 +26,8 @@ function Carousel({ bestAppsList }) {
             <SwiperSlide>
               <center>
                 <img class="img-carousel" src={app.photos[0]} alt={app.name} />
-                <img class="img-carousel" src={app.photos[1]} alt={app.name} />
-                <img class="img-carousel" src={app.photos[2]} alt={app.name} />
+                {/* <img class="img-carousel" src={app.photos[1]} alt={app.name} />
+                <img class="img-carousel" src={app.photos[2]} alt={app.name} /> */}
               </center>
             </SwiperSlide>
           );

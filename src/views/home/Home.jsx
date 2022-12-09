@@ -48,6 +48,8 @@ export default function Home() {
         tabsFilterOrder={tabsFilterOrder}
         appTypes={allAppTypes}
       />
+      <Carousel bestAppsList={bestAppsList} />
+
       <FilterTabs
         bestAppsList={bestAppsList}
         intermediateAppsList={intermediateAppsList}
@@ -59,7 +61,6 @@ export default function Home() {
         secondDataOrder={secondDataOrder}
         setSecondDataOrder={setSecondDataOrder}
       />
-      <Carousel bestAppsList={bestAppsList} />
       <ContainerApps apps={renderAppsList}>
         {renderAppsList.map((app) => {
           return <Card key={app.app_id} app={app} />;
