@@ -10,7 +10,6 @@ export const Header = styled.header`
   justify-content: space-between;
   -moz-box-align: center;
   align-items: center;
-  margin-bottom: 5vw;
   height: 3rem;
 
   .logo {
