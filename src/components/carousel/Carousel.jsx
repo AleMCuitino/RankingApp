@@ -5,12 +5,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-
 import { SwiperStyle } from "./CarouselStyle";
 
-
-
-function Carousel({bestAppsList}) {
+function Carousel({ bestAppsList }) {
   return (
     <>
       <SwiperStyle
@@ -40,4 +37,4 @@ function Carousel({bestAppsList}) {
   );
 }
 
-export default Carousel
+export default Carousel;
