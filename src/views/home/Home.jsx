@@ -64,6 +64,7 @@ export default function Home() {
         {renderAppsList.map((app) => {
           return <Card key={app.app_id} app={app} />;
         })}
+        
       </ContainerApps>
       <IconAddApp>
         <Link to="/createapp">
