@@ -1,12 +1,8 @@
 import styled from "styled-components";
 import {
-  bgDark,
   bgLight,
-  bgPrimary,
   bgSecondary,
-  txtDark,
   txtLight,
-  txtPrimary,
   txtSecondary,
 } from "../../variables/ColorVariables";
 
@@ -20,6 +16,7 @@ export const Overlay = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 99;
 `;
 
 export const PopUpContainer = styled.div`
@@ -35,12 +32,12 @@ export const PopUpContainer = styled.div`
   border-radius: 0.5rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   padding: 1rem;
-  @media (min-width: 560px){
-    max-width:65%;
+  z-index: 99;
+  @media (min-width: 560px) {
+    max-width: 65%;
     justify-content: space-evenly;
     align-items: center;
   }
-  
 `;
 
 export const FiltersContainer = styled.div`
@@ -48,9 +45,8 @@ export const FiltersContainer = styled.div`
   flex-direction: row;
   gap: 1rem;
   justify-content: center;
-  @media (min-width: 560px){
+  @media (min-width: 560px) {
     gap: 8rem;
-
   }
 `;
 
@@ -65,8 +61,8 @@ export const CloseButton = styled.button`
   cursor: pointer;
   transition: 0.3s ease all;
   border-radius: 2%;
-  display:flex;
-  align-content:center;
+  display: flex;
+  align-content: center;
   justify-content: center;
   ${txtSecondary};
   font-size: 1.5rem;
@@ -83,8 +79,7 @@ export const Span = styled.span`
   ${txtSecondary};
   font-weight: 500;
   font-size: 1.1;
-
-  `;
+`;
 
 export const ToggleButtonsTops = styled.div`
   display: flex;
@@ -103,4 +98,3 @@ export const ToggleButtonsType = styled.div`
   font-size: 1rem;
   font-weight: 600;
 `;
-

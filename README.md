@@ -7,7 +7,7 @@
   - [Table of Contents](#table-of-contents)
   - [General Information](#general-information)
   - [Screenshots](#screenshots)
-  - [Tecnologies](#tecnologies)
+  - [Technologies](#technologies)
   - [Deployment](#deployment)
   - [Support](#support)
   - [Collaboration](#collaboration)
@@ -16,9 +16,9 @@
 
 ***
 ## General Information
-AppRank is the UX/UI International comission app designed to rank applications.  
+AppRank is an app designed by the UX/UI International Comission with the purpose of allowing users to rank applications.  
 
-Users may find, review and rank Apps.
+The app allow users to find, map, review and rank all apps on the market.
  
 
 ***
@@ -35,7 +35,7 @@ Users may find, review and rank Apps.
 ![screenshot0****](./src/assets/images/screenshoot04.png)
 
 ***
-## Tecnologies
+## Technologies
 The project was developed with the following technologies
 * HTML5
 * JavaScript
@@ -67,7 +67,7 @@ To handle any enquiries contact
 
 
 ## Collaboration
-The project is open to users contributions. If you may contribute you should contact:
+The project is open to user contributions. If you wish to contribute you should contact:
 
 > andres.patino@factoriaf5.org
 ***
@@ -87,13 +87,21 @@ The project is open to users contributions. If you may contribute you should con
 
 1. **Can I rank Apps for all devices?**
 
-Apps can be ranked either for Windows, Android or Mac iOS
+Apps can be ranked either for Windows, Android or Mac iOS.
 
 2. **Can I rank my own App?**
 
-Anyone can upload your App to our database and every user will be able to rank it. In the future you will be able to log-in and manage your app 
+Anyone can upload your app to our database and every user is able to rank it. In future versions of AppRank you will be able to create a user account and manage your app information.
 
-3. **
+3. **Can I download apps from AppRank?**
+
+As of now AppRank is merely an informative database. Future versions of our App may feature download options.
+
+4. **Does AppRank have a premium version?**
+
+AppRank does not have any premium services. You can use all of our features completely free.
+
+
 
 
  ``` 
