@@ -102,7 +102,7 @@ function Baseimg() {
         });
       }
     } else {
-      alert("Por favor agrega tu nombre y una descripción.");
+      alert("Please enter your name and a description.");
     }
   }
 
@@ -143,7 +143,7 @@ function Baseimg() {
 
   return (
     <Container>
-      <h2>Agregar App</h2>
+      <h2>Add App</h2>
       <ContainerForm onSubmit={handleSubmit}>
         <ContainerImgForm>
           <input
