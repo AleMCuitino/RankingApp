@@ -9,6 +9,9 @@ import { SwiperStyle} from './CarouselStyle';
 
 
 
+
+
+
 function carousel({bestAppsList}) {
   return (
     <>
