@@ -8,6 +8,12 @@ import Carousel from "../../components/carousel/Carousel";
 import { ContainerApps, IconAddApp } from "./HomeStyle";
 import { FaPlusCircle } from "react-icons/fa";
 import Footer from "../../components/footer/Footer";
+import Apps from "../../data/app.json";
+import FilterButtons from "../../components/filter-buttons/FilterButtons";
+import { ContainerApps } from "./HomeStyle";
+
+import CheckboxList from "../../components/filter-buttons/ButtonsList";
+import Carousel from "../../components/carousel/Carousel";
 
 export default function Home() {
   // New array with ordered apps from higher to lower ranking value.

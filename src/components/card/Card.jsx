@@ -1,6 +1,5 @@
 import { React, useState } from "react";
 import { App, Icon, TextContainer } from "./CardStyle";
-import { Rating } from "@mui/material";
 import { AiFillStar } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
@@ -22,13 +21,6 @@ function Card({ app }) {
               <b>{app.rating.toString()}</b>
             </span>
           </div>
-          {/* <Rating
-            name="half-rating-read"
-            defaultValue={parseFloat(app.rating)}
-            style={{ color: "#2670E0" }}
-            precision={1}
-            readOnly
-          /> */}
         </TextContainer>
       </App>
     </>
