@@ -26,13 +26,13 @@ function NewApps({baseImage,coments, deleteComent,e,index, setEditData}) {
                   className="btn btn-outline-warning mx-1"
                   onClick={() => setEditData(e)}
                   >
-                  Editar
+                  Edit
                 </button>
               <button
                 className="btn btn-outline-danger mx-1"
                 onClick={() => deleteComent(e.id)}
               >
-                Eliminar
+                Delete
               </button>
             </TextContainer>
           </App>
