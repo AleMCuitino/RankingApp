@@ -11,6 +11,5 @@ export const IconAddApp = styled.div`
   position: fixed;
   bottom: 0;
   right: 1rem;
-  right: 100;
   z-index: 1;
 `;
