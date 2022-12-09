@@ -52,7 +52,7 @@ The project was developed with the following technologies
 ## Deployment
 
   
-https://ranking-app-xo4j.vercel.app/git
+https://ranking-app-eosin.vercel.app/
 
 
 ***
