@@ -1,37 +1,62 @@
-import React from "react";
+import React, { useState } from "react";
+import FilterTab from "./filter-tab/FilterTab";
+import { FilterTabsContainer } from "./FilterTabsContainer";
 
-function FilterTabs({ updateAppsList }) {
+function FilterTabs({
+  bestAppsList,
+  intermediateAppsList,
+  worstAppsList,
+  setRenderAppsList,
+  originalDataOrder,
+  setOriginalDataOrder,
+  secondDataOrder,
+  setSecondDataOrder,
+}) {
+  const [tabState, setTabState] = useState("Mejores");
+
+  const updateAppsList = (order) => {
+    //Mejores, Peores, Intermedias
+    if (order === "Mejores") {
+      setOriginalDataOrder(bestAppsList);
+      setRenderAppsList(bestAppsList); // Estado 1 - Render
+      setSecondDataOrder(bestAppsList);
+      setTabState(order);
+    }
+    if (order === "Intermedias") {
+      setOriginalDataOrder(intermediateAppsList);
+      setRenderAppsList(intermediateAppsList); // Render
+      setSecondDataOrder(bestAppsList);
+      setTabState(order);
+    }
+    if (order === "Peores") {
+      setOriginalDataOrder(worstAppsList);
+      setRenderAppsList(worstAppsList); // Render
+      setSecondDataOrder(bestAppsList);
+      setTabState(order);
+    }
+  };
+
   return (
-    <>
-      <label>
-        <input
-          type="radio"
-          name="filter"
-          value="Mejores"
-          onClick={(e) => updateAppsList(e.target.value)}
-          defaultChecked={true}
-        />
-        Best
-      </label>
-      <label>
-        <input
-          type="radio"
-          name="filter"
-          value="Intermedias"
-          onClick={(e) => updateAppsList(e.target.value)}
-        />
-        Intermediate
-      </label>
-      <label>
-        <input
-          type="radio"
-          name="filter"
-          value="Peores"
-          onClick={(e) => updateAppsList(e.target.value)}
-        />
-        Worst
-      </label>
-    </>
+    <FilterTabsContainer>
+      <FilterTab
+        updateAppsList={updateAppsList}
+        text="Best"
+        value="Mejores"
+        name="filter"
+      />
+      <FilterTab
+        updateAppsList={updateAppsList}
+        text="Intermediate"
+        value="Intermedias"
+        name="filter"
+      />
+      <FilterTab
+        updateAppsList={updateAppsList}
+        text="Worst"
+        value="Peores"
+        name="filter"
+      />
+    </FilterTabsContainer>
   );
 }
 
