@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { bgPrimary } from "../../../variables/ColorVariables";
 
-export const FilterButtonStyled = styled.button`
+export const FilterTabStyled = styled.button`
   border: none;
   padding: 0.2rem 4rem;
   border-top-left-radius: 0.3rem;
