@@ -4,17 +4,25 @@ import logo from "../../assets/images/ranking-app-logo-b.svg";
 import SearchButton from '../searchButton/SearchButton';
 import { Header } from './NavbarStyle';
 
-function Navbar() {
-  
+function Navbar({
+  renderAppsList,
+  setRenderAppsList,
+  originalDataOrder,
+  setOriginalDataOrder,
+}) {
   return (
-    
     <Header>
-      <Link to="/" className='logo'>
+      <Link to="/" className="logo">
         <img src={logo} alt="RankingApp logo" />
       </Link>
-      <SearchButton/>
+      <SearchButton
+        renderAppsList={renderAppsList}
+        setRenderAppsList={setRenderAppsList}
+        originalDataOrder={originalDataOrder}
+        setOriginalDataOrder={setOriginalDataOrder}
+      />
     </Header>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

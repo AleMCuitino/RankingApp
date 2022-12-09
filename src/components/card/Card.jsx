@@ -20,7 +20,6 @@ function Card({ app }) {
             <AiFillStar style={{ color: "#2670E0" }} />
             <span>
               <b>{app.rating.toString()}</b>
-              
             </span>
           </div>
           {/* <Rating
