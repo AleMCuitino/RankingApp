@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import Navbar from "../../components/navbar/Navbar";
 import Apps from "../../data/app.json";
 import FilterTabs from "../../components/filter-tabs/FilterTabs";
-import { ContainerApps } from "./HomeStyle";
 import Carousel from "../../components/carousel/Carousel"
 import { ContainerApps, IconAddApp } from "./HomeStyle";
 import { FaPlusCircle } from "react-icons/fa";
