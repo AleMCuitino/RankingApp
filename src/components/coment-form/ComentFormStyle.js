@@ -1,26 +1,25 @@
 import styled from "styled-components";
 import { bgPrimary } from "../../variables/ColorVariables";
 
-export const FormContainer = styled.div`
-  /* margin: 10rem 18rem 1rem 18rem; */
-  padding: 1rem;
+export const FormContainer = styled.form`
   
-  width: 60vw;
-
+  width: 80vw;
+  
   button{
     border: none;
     padding: 0.2rem 4rem;
-    border-radius: 1rem;
+    border-radius: 0.8rem;
     height: 2rem;
     width: 7rem;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: ${bgPrimary};
-  &:hover{
+    background-color: #2670E0;
+    color: aliceblue;
+  /* &:hover{
     ${bgPrimary}
-  }
+  } */
   }
 `;
 export const FormInput = styled.div`

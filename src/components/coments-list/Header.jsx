@@ -1,8 +1,14 @@
 import { React, useState, useEffect } from "react";
-import { FormContainer, FormInput, Input } from "./ComentFormStyle";
 
-function ComentForm({ addComent, editComent, editData }) {
-  
+import { AiOutlinePlusCircle } from "react-icons/ai";
+import { Rating } from "@mui/material";
+import {
+  FormContainer,
+  FormInput,
+  Input,
+} from "../coment-form/ComentFormStyle";
+
+function Header({ addComent, editComent, editData }) {
   const [formData, setFormData] = useState({
     coment: "",
     description: "",
@@ -47,6 +53,33 @@ function ComentForm({ addComent, editComent, editData }) {
       [e.target.name]: e.target.value,
     });
   }
+  // const [ title, setTitle ] = useState('')
+  // const [ description, setDescription ] = useState('')
+
+  // function handleSubmit(event){
+  //     event.preventDefault()
+
+  //     onAddTask(title)
+  //     onAddTask(description)
+
+  //     setTitle('')
+  //     setDescription('')
+  // }
+  // function handleSubmitdesc(event){
+  //     event.preventDefault()
+
+  //     onAddTask(description)
+
+  //     setDescription('')
+  // }
+
+  // function onChangeTitle(event) {
+  //     setTitle(event.target.value)
+  // }
+
+  // function onChangeDescription(event) {
+  //     setDescription(event.target.value)
+  // }
 
   return (
     <FormContainer onSubmit={handleSubmit}>
@@ -73,12 +106,14 @@ function ComentForm({ addComent, editComent, editData }) {
           HeightInput="6rem"
         ></Input>
       </FormInput>
-      <button className="btn btn-success mx-1" type="submit" value="Enviar">
-        Send
-      </button>
+      {/* <button>Send</button> */}
+
+      
+
+      <button className="btn btn-success mx-1" type="submit" value="Enviar" >Send</button>
       {/* <input className="btn btn-danger mx-1" type="reset" value="Cancelar" /> */}
     </FormContainer>
   );
 }
 
-export default ComentForm;
+export default Header;

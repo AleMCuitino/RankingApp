@@ -1,9 +1,13 @@
 import Card from "../../components/card/Card";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Navbar from "../../components/navbar/Navbar";
 import Apps from "../../data/app.json";
 import FilterTabs from "../../components/filter-tabs/FilterTabs";
 import { ContainerApps } from "./HomeStyle";
+import Carousel from "../../components/carousel/Carousel"
+import { ContainerApps, IconAddApp } from "./HomeStyle";
+import { FaPlusCircle } from "react-icons/fa";
 
 export default function Home() {
   // New array with ordered apps from higher to lower ranking value.
@@ -54,12 +58,19 @@ export default function Home() {
         setOriginalDataOrder={setOriginalDataOrder}
         secondDataOrder={secondDataOrder}
         setSecondDataOrder={setSecondDataOrder}
-      />
+      <Navbar />
+      <Carousel bestAppsList={bestAppsList}/>
       <ContainerApps apps={renderAppsList}>
         {renderAppsList.map((app) => {
           return <Card key={app.app_id} app={app} />;
         })}
       </ContainerApps>
+      <IconAddApp>
+                <Link to="/createapp">
+                    <FaPlusCircle style={{ color: "#2370e0" }} />
+                </Link>
+            </IconAddApp>
+      <Footer/>
     </>
   );
 }
