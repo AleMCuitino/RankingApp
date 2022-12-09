@@ -25,14 +25,14 @@ The app allow users to find, map, review and rank all apps on the market.
 
 ## Screenshots
 
-![screenshot0****](./src/assets/images/screenshoot01.png)
+![screenshot01](./src/assets/images/screenshot01.png)
 ***
-![screenshot0****](./src/assets/images/screenshoot02.png)
+![screenshot02](./src/assets/images/screenshot02.png)
 ***
-![screenshot0****](./src/assets/images/screenshoot03.png)
+![screenshot03](./src/assets/images/screenshot03.png)
 
 ***
-![screenshot0****](./src/assets/images/screenshoot04.png)
+![screenshot04](./src/assets/images/screenshot04.png)
 
 ***
 ## Technologies
@@ -51,9 +51,9 @@ The project was developed with the following technologies
 ***
 ## Deployment
 
- ``` 
-git clone https://netlify.com/
-```
+  
+https://ranking-app-eosin.vercel.app/
+
 
 ***
 
