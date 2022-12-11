@@ -12,7 +12,7 @@ export const Button = styled.button`
   background: none;
 `;
  export const Icon = styled(FaSearch)`
-font-size:1.2rem;
+font-size:1.8rem;
 ${txtLight};
 
 

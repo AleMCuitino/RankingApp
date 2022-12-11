@@ -12,8 +12,8 @@ function Navbar({
 }) {
   return (
     <Header>
-      <Link to="/" className="logo">
-        <img src={logo} alt="RankingApp logo" />
+      <Link to="/" >
+        <img src={logo} alt="RankingApp logo" className="logo"/>
       </Link>
       <SearchButton
         renderAppsList={renderAppsList}

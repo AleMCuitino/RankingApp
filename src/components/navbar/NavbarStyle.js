@@ -7,20 +7,18 @@ export const Header = styled.header`
   flex-direction: row;
   height: 10vh;
   justify-content: space-between;
-  /* padding: 2vw 2vw; */
+  padding: 1rem 2rem 1em 1rem;
   align-items: center;
-  margin-bottom: 5vw;
+  margin-bottom: 5rem;
 
   .logo {
-    width: 15vw;
+    width: 10rem;
     display: flex;
     align-items: center;
     margin-left: 2.5vw;
     
   }
 
-  img {
-    width: 80%;
-  }
+  
 `;
 

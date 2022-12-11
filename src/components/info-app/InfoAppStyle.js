@@ -14,10 +14,14 @@ export const MainContainer = styled.div`
 `;
 
 export const IconReturn = styled.div`
-  font-size: 6vw;
-  position: absolute;
-  left: 5vw;
-  top: 10vw;
+  font-size: 8vw;
+
+  .faicon {
+    width: 20rem;
+    position: absolute;
+    left: 0.2px;
+    top: 30%;
+  }
 `;
 
 export const ContainerImgApp = styled.div`

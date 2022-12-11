@@ -75,7 +75,7 @@ function InfoApp() {
         <MainContainer key={index}>
           <IconReturn>
             <Link to="/">
-              <FaArrowAltCircleLeft style={{ color: "#2370e0" }} />
+              <FaArrowAltCircleLeft style={{ color: "#2370e0" }} className="faicon"/>
             </Link>
           </IconReturn>
           <ContainerImgApp>
